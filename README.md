@@ -9,4 +9,4 @@ Calculation of Value-at-Risk metric for c++. Here is realisation of three method
 
 It is a student project, so fell free to comment on ours mistakes
 
-Authors: Vsevolod Legnev, Kalenov Viktor
+Authors: Vsevolod Lezhnev, Kalenov Viktor
