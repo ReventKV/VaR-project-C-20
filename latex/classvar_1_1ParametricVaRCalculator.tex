@@ -1,0 +1,155 @@
+\doxysection{var\+::Parametric\+Va\+RCalculator Class Reference}
+\hypertarget{classvar_1_1ParametricVaRCalculator}{}\label{classvar_1_1ParametricVaRCalculator}\index{var::ParametricVaRCalculator@{var::ParametricVaRCalculator}}
+
+
+Калькулятор параметрического VaR (Delta-\/\+Normal / Variance-\/\+Covariance).  
+
+
+
+
+{\ttfamily \#include $<$Parametric\+Va\+RCalculator.\+hpp$>$}
+
+
+
+Inheritance diagram for var\+::Parametric\+Va\+RCalculator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=233pt]{classvar_1_1ParametricVaRCalculator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for var\+::Parametric\+Va\+RCalculator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvar_1_1ParametricVaRCalculator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classvar_1_1ParametricVaRCalculator_aa3ca8cd2a85525f34bdeafd9b5170496}{Parametric\+Va\+RCalculator}} (std\+::map$<$ std\+::string, \mbox{\hyperlink{classvar_1_1TimeSeries}{Time\+Series}} $>$ market\+Data)
+\begin{DoxyCompactList}\small\item\em Конструктор. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classvar_1_1ParametricVaRCalculator_ae89329fc76e92ffce9cb6fccad788134}{calculate\+VaR}} (const \mbox{\hyperlink{classvar_1_1Portfolio}{Portfolio}} \&portfolio, double confidence, int horizon) const override
+\begin{DoxyCompactList}\small\item\em Вычисляет VaR аналитически. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classvar_1_1VaRCalculator}{var\+::\+Va\+RCalculator}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classvar_1_1VaRCalculator_a7fc7d6f996a041bef7b95381cad04b3d}{\texorpdfstring{$\sim$}{\string~}\+Va\+RCalculator}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classvar_1_1ParametricVaRCalculator_a7eb02c5f3e93983abf102fcaaacbcde1}{get\+Normal\+Quantile}} (double confidence) const
+\begin{DoxyCompactList}\small\item\em Возвращает квантиль нормального распределения (Z-\/score). Например, 1.\+645 для 95\%. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ std\+::string, \mbox{\hyperlink{classvar_1_1TimeSeries}{Time\+Series}} $>$ \mbox{\hyperlink{classvar_1_1ParametricVaRCalculator_afcd7b8e96b48f869df41f416c3aa4d26}{market\+Data\+\_\+}}
+\item 
+\mbox{\hyperlink{classvar_1_1RiskModel}{Risk\+Model}} \mbox{\hyperlink{classvar_1_1ParametricVaRCalculator_adefdb6af747b9092fa8e42ff8e7145f7}{risk\+Model\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Калькулятор параметрического VaR (Delta-\/\+Normal / Variance-\/\+Covariance). 
+
+Предполагает нормальное распределение доходностей активов. Использует аналитическую формулу\+: $ VaR = Value \times z_{\alpha} \times \sigma_p \times \sqrt{T} $ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classvar_1_1ParametricVaRCalculator_aa3ca8cd2a85525f34bdeafd9b5170496}\label{classvar_1_1ParametricVaRCalculator_aa3ca8cd2a85525f34bdeafd9b5170496} 
+\index{var::ParametricVaRCalculator@{var::ParametricVaRCalculator}!ParametricVaRCalculator@{ParametricVaRCalculator}}
+\index{ParametricVaRCalculator@{ParametricVaRCalculator}!var::ParametricVaRCalculator@{var::ParametricVaRCalculator}}
+\doxysubsubsection{\texorpdfstring{ParametricVaRCalculator()}{ParametricVaRCalculator()}}
+{\footnotesize\ttfamily var\+::\+Parametric\+Va\+RCalculator\+::\+Parametric\+Va\+RCalculator (\begin{DoxyParamCaption}\item[{std\+::map$<$ std\+::string, \mbox{\hyperlink{classvar_1_1TimeSeries}{Time\+Series}} $>$}]{market\+Data }\end{DoxyParamCaption})}
+
+
+
+Конструктор. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em market\+Data} & Карта рыночных данных ("{}Тикер"{} -\/\texorpdfstring{$>$}{>} "{}История цен"{}). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classvar_1_1ParametricVaRCalculator_ae89329fc76e92ffce9cb6fccad788134}\label{classvar_1_1ParametricVaRCalculator_ae89329fc76e92ffce9cb6fccad788134} 
+\index{var::ParametricVaRCalculator@{var::ParametricVaRCalculator}!calculateVaR@{calculateVaR}}
+\index{calculateVaR@{calculateVaR}!var::ParametricVaRCalculator@{var::ParametricVaRCalculator}}
+\doxysubsubsection{\texorpdfstring{calculateVaR()}{calculateVaR()}}
+{\footnotesize\ttfamily double var\+::\+Parametric\+Va\+RCalculator\+::calculate\+VaR (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classvar_1_1Portfolio}{Portfolio}} \&}]{portfolio,  }\item[{double}]{confidence,  }\item[{int}]{horizon }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Вычисляет VaR аналитически. 
+
+
+\begin{DoxyEnumerate}
+\item Строит ковариационную матрицу активов портфеля.
+\item Вычисляет дисперсию портфеля на основе весов позиций.
+\item Масштабирует стандартное отклонение на Z-\/score (квантиль нормального распределения). 
+\end{DoxyEnumerate}
+
+Implements \mbox{\hyperlink{classvar_1_1VaRCalculator_a4a08d218c4b9d43f20c5a50cee554b90}{var\+::\+Va\+RCalculator}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvar_1_1ParametricVaRCalculator_ae89329fc76e92ffce9cb6fccad788134_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvar_1_1ParametricVaRCalculator_ae89329fc76e92ffce9cb6fccad788134_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classvar_1_1ParametricVaRCalculator_a7eb02c5f3e93983abf102fcaaacbcde1}\label{classvar_1_1ParametricVaRCalculator_a7eb02c5f3e93983abf102fcaaacbcde1} 
+\index{var::ParametricVaRCalculator@{var::ParametricVaRCalculator}!getNormalQuantile@{getNormalQuantile}}
+\index{getNormalQuantile@{getNormalQuantile}!var::ParametricVaRCalculator@{var::ParametricVaRCalculator}}
+\doxysubsubsection{\texorpdfstring{getNormalQuantile()}{getNormalQuantile()}}
+{\footnotesize\ttfamily double var\+::\+Parametric\+Va\+RCalculator\+::get\+Normal\+Quantile (\begin{DoxyParamCaption}\item[{double}]{confidence }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Возвращает квантиль нормального распределения (Z-\/score). Например, 1.\+645 для 95\%. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvar_1_1ParametricVaRCalculator_a7eb02c5f3e93983abf102fcaaacbcde1_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classvar_1_1ParametricVaRCalculator_afcd7b8e96b48f869df41f416c3aa4d26}\label{classvar_1_1ParametricVaRCalculator_afcd7b8e96b48f869df41f416c3aa4d26} 
+\index{var::ParametricVaRCalculator@{var::ParametricVaRCalculator}!marketData\_@{marketData\_}}
+\index{marketData\_@{marketData\_}!var::ParametricVaRCalculator@{var::ParametricVaRCalculator}}
+\doxysubsubsection{\texorpdfstring{marketData\_}{marketData\_}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, \mbox{\hyperlink{classvar_1_1TimeSeries}{Time\+Series}}$>$ var\+::\+Parametric\+Va\+RCalculator\+::market\+Data\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classvar_1_1ParametricVaRCalculator_adefdb6af747b9092fa8e42ff8e7145f7}\label{classvar_1_1ParametricVaRCalculator_adefdb6af747b9092fa8e42ff8e7145f7} 
+\index{var::ParametricVaRCalculator@{var::ParametricVaRCalculator}!riskModel\_@{riskModel\_}}
+\index{riskModel\_@{riskModel\_}!var::ParametricVaRCalculator@{var::ParametricVaRCalculator}}
+\doxysubsubsection{\texorpdfstring{riskModel\_}{riskModel\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classvar_1_1RiskModel}{Risk\+Model}} var\+::\+Parametric\+Va\+RCalculator\+::risk\+Model\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ParametricVaRCalculator_8hpp}{Parametric\+Va\+RCalculator.\+hpp}}\item 
+\mbox{\hyperlink{ParametricVaRCalculator_8cpp}{Parametric\+Va\+RCalculator.\+cpp}}\end{DoxyCompactItemize}

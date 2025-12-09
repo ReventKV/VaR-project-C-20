@@ -1,0 +1,36 @@
+\doxysection{Data\+Loader.\+hpp}
+\hypertarget{DataLoader_8hpp_source}{}\label{DataLoader_8hpp_source}\index{DataLoader.hpp@{DataLoader.hpp}}
+\mbox{\hyperlink{DataLoader_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{TimeSeries_8hpp}{var/TimeSeries.hpp}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacevar}{var}}\ \{}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classvar_1_1CsvReader}{CsvReader}}\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{classvar_1_1CsvReader_a48db687dffdb33277075666f722d5c0b}{CsvReader}}(\textcolor{keywordtype}{char}\ delimiter\ =\ \textcolor{charliteral}{','})\ :\ \mbox{\hyperlink{classvar_1_1CsvReader_a64e892218a5a46e64af764c8b75118d0}{delimiter\_}}(delimiter)\ \{\}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00029\ \ \ \ \ std::vector<std::string>\ \mbox{\hyperlink{classvar_1_1CsvReader_a5b547e9ce74dd61d6b7b572da0d0f882}{parseLine}}(\textcolor{keyword}{const}\ std::string\&\ line)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classvar_1_1CsvReader_a64e892218a5a46e64af764c8b75118d0}{delimiter\_}};}
+\DoxyCodeLine{00033\ \};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classvar_1_1DataLoader}{DataLoader}}\ \{}
+\DoxyCodeLine{00042\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{classvar_1_1DataLoader_a4b6e5e5c646170c024e129b549184b40}{DataLoader}}(\textcolor{keyword}{const}\ std::string\&\ filePath)\ :\ \mbox{\hyperlink{classvar_1_1DataLoader_a0336b9412475d6296be8bcd3acd18cb2}{filePath\_}}(filePath)\ \{\}}
+\DoxyCodeLine{00049\ \ \ \ \ }
+\DoxyCodeLine{00059\ \ \ \ \ \mbox{\hyperlink{classvar_1_1TimeSeries}{TimeSeries}}\ \mbox{\hyperlink{classvar_1_1DataLoader_a40a9c581f7ede5e4f6fe99ae5ef97773}{load}}();}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00062\ \ \ \ \ std::string\ \mbox{\hyperlink{classvar_1_1DataLoader_a0336b9412475d6296be8bcd3acd18cb2}{filePath\_}};}
+\DoxyCodeLine{00063\ \};}
+\DoxyCodeLine{00064\ \}}
+
+\end{DoxyCode}

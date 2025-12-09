@@ -1,0 +1,49 @@
+\doxysection{Time\+Series.\+hpp}
+\hypertarget{TimeSeries_8hpp_source}{}\label{TimeSeries_8hpp_source}\index{TimeSeries.hpp@{TimeSeries.hpp}}
+\mbox{\hyperlink{TimeSeries_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ Одна\ точка\ данных:\ дата\ и\ цена}}
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacevar}{var}}\ \{}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structvar_1_1PriceRecord}{PriceRecord}}\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ std::string\ \mbox{\hyperlink{structvar_1_1PriceRecord_a3f6cab79ec45f9edd99aba259645d829}{date}};}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structvar_1_1PriceRecord_ae440f2c3d7e6284b17635f8593649632}{price}};}
+\DoxyCodeLine{00019\ \};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classvar_1_1TimeSeries}{TimeSeries}}\ \{}
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classvar_1_1TimeSeries_a581fcdb02d214bc75d8961498f385a10}{add}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structvar_1_1PriceRecord}{PriceRecord}}\&\ record)\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classvar_1_1TimeSeries_a7ecec1df59bce2a89b1f60f493854692}{records\_}}.push\_back(record);}
+\DoxyCodeLine{00036\ \ \ \ \ \}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00044\ \ \ \ \ std::vector<double>\ \mbox{\hyperlink{classvar_1_1TimeSeries_a74eb9df44499c41170a8168c655c8020}{getPriceSeries}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ std::vector<double>\ prices;}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ prices.reserve(\mbox{\hyperlink{classvar_1_1TimeSeries_a7ecec1df59bce2a89b1f60f493854692}{records\_}}.size());}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ rec\ :\ \mbox{\hyperlink{classvar_1_1TimeSeries_a7ecec1df59bce2a89b1f60f493854692}{records\_}})\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ prices.push\_back(rec.price);}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ prices;}
+\DoxyCodeLine{00051\ \ \ \ \ \}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<PriceRecord>\&\ \mbox{\hyperlink{classvar_1_1TimeSeries_ac8bab0de4eab6515b77b8548f1a5ab48}{getRecords}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classvar_1_1TimeSeries_a7ecec1df59bce2a89b1f60f493854692}{records\_}};}
+\DoxyCodeLine{00056\ \ \ \ \ \}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classvar_1_1TimeSeries_a4b80cd22d91b3c9d4aa92cd37bea3123}{size}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classvar_1_1TimeSeries_a7ecec1df59bce2a89b1f60f493854692}{records\_}}.size();}
+\DoxyCodeLine{00061\ \ \ \ \ \}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00064\ \ \ \ \ std::vector<PriceRecord>\ \mbox{\hyperlink{classvar_1_1TimeSeries_a7ecec1df59bce2a89b1f60f493854692}{records\_}};}
+\DoxyCodeLine{00065\ \};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \}}
+
+\end{DoxyCode}

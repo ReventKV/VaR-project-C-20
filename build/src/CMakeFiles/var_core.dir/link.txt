@@ -1,0 +1,2 @@
+/usr/bin/ar qc libvar_core.a CMakeFiles/var_core.dir/DataLoader.cpp.o CMakeFiles/var_core.dir/ReturnCalculator.cpp.o CMakeFiles/var_core.dir/RiskModel.cpp.o CMakeFiles/var_core.dir/Portfolio.cpp.o CMakeFiles/var_core.dir/ParametricVaRCalculator.cpp.o CMakeFiles/var_core.dir/MonteCarloEngine.cpp.o CMakeFiles/var_core.dir/MonteCarloVaRCalculator.cpp.o CMakeFiles/var_core.dir/MCStatistics.cpp.o CMakeFiles/var_core.dir/VaREngine.cpp.o CMakeFiles/var_core.dir/HistoricalVaRCalculator.cpp.o
+/usr/bin/ranlib libvar_core.a

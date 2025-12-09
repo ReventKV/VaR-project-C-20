@@ -1,0 +1,5 @@
+<map id="var::SimulationEngine" name="var::SimulationEngine">
+<area shape="rect" id="Node000001" title="Абстрактный генератор рыночных сценариев." alt="" coords="5,5,169,91"/>
+<area shape="rect" id="Node000002" href="$classvar_1_1MonteCarloEngine.html" title="Движок Монте&#45;Карло на основе Геометрического Броуновского Движения (GBM)." alt="" coords="6,139,169,324"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,104,90,138,85,138,85,104"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="var::VaREngine" name="var::VaREngine">
+<area shape="rect" id="Node000001" title="Главный фасад (Orchestrator) библиотеки." alt="" coords="12,173,125,259"/>
+<area shape="rect" id="Node000002" href="$classvar_1_1Portfolio.html" title="Инвестиционный портфель." alt="" coords="5,5,132,111"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="71,111,71,157,66,157,66,111"/>
+</map>

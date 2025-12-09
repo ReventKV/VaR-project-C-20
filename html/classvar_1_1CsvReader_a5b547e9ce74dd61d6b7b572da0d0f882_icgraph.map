@@ -1,0 +1,14 @@
+<map id="var::CsvReader::parseLine" name="var::CsvReader::parseLine">
+<area shape="rect" id="Node000001" title="Разбирает строку CSV." alt="" coords="721,31,913,56"/>
+<area shape="rect" id="Node000002" href="$classvar_1_1DataLoader.html#a40a9c581f7ede5e4f6fe99ae5ef97773" title="Загружает данные из файла." alt="" coords="511,31,673,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="707,46,673,46,673,41,707,41"/>
+<area shape="rect" id="Node000003" href="$classvar_1_1VaREngine.html#a5c58efddf8d7050257896c4c8dfc9e79" title="Добавить актив в анализ." alt="" coords="275,31,463,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="497,46,463,46,463,41,497,41"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#a373f50dd0acc2242b860b01d40f649ed" title=" " alt="" coords="108,5,227,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="261,32,227,28,227,23,261,27"/>
+<area shape="rect" id="Node000006" href="$main_8cpp.html#ac16e2ad4707b661903695efc048f865e" title=" " alt="" coords="113,55,222,80"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="261,59,223,63,222,58,261,54"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,31,60,56"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="95,34,61,41,60,36,94,29"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="99,58,60,51,61,45,100,53"/>
+</map>

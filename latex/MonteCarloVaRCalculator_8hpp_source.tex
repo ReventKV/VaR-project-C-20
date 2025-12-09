@@ -1,0 +1,30 @@
+\doxysection{Monte\+Carlo\+Va\+RCalculator.\+hpp}
+\hypertarget{MonteCarloVaRCalculator_8hpp_source}{}\label{MonteCarloVaRCalculator_8hpp_source}\index{MonteCarloVaRCalculator.hpp@{MonteCarloVaRCalculator.hpp}}
+\mbox{\hyperlink{MonteCarloVaRCalculator_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{VaRCalculator_8hpp}{var/VaRCalculator.hpp}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{RiskModel_8hpp}{var/RiskModel.hpp}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{SimulationEngine_8hpp}{var/SimulationEngine.hpp}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacevar}{var}}\ \{}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classvar_1_1MonteCarloVaRCalculator}{MonteCarloVaRCalculator}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classvar_1_1VaRCalculator}{VaRCalculator}}\ \{}
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{classvar_1_1MonteCarloVaRCalculator}{MonteCarloVaRCalculator}}(\textcolor{keywordtype}{int}\ numPaths,\ std::map<std::string,\ TimeSeries>\ marketData,\ uint32\_t\ seed\ =\ 42);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classvar_1_1MonteCarloVaRCalculator_a395e29493af5d757dfe7a45e236aa46a}{calculateVaR}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classvar_1_1Portfolio}{Portfolio}}\&\ portfolio,\ \textcolor{keywordtype}{double}\ confidence,\ \textcolor{keywordtype}{int}\ horizon)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classvar_1_1MonteCarloVaRCalculator_a900ed6ec952d657ae652012f27252584}{numPaths\_}};}
+\DoxyCodeLine{00035\ \ \ \ \ std::map<std::string,\ TimeSeries>\ \mbox{\hyperlink{classvar_1_1MonteCarloVaRCalculator_a31ef03b51f75d48f4972cf923e7cf94b}{marketData\_}};}
+\DoxyCodeLine{00036\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{classvar_1_1MonteCarloVaRCalculator_a2669268466bfcaa32dd829c1c1dce138}{seed\_}};}
+\DoxyCodeLine{00037\ \};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \}}
+
+\end{DoxyCode}

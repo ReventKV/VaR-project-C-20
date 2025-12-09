@@ -1,0 +1,100 @@
+\doxysection{var\+::Csv\+Reader Class Reference}
+\hypertarget{classvar_1_1CsvReader}{}\label{classvar_1_1CsvReader}\index{var::CsvReader@{var::CsvReader}}
+
+
+Парсер CSV строк.  
+
+
+
+
+{\ttfamily \#include $<$Data\+Loader.\+hpp$>$}
+
+
+
+Collaboration diagram for var\+::Csv\+Reader\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=165pt]{classvar_1_1CsvReader__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classvar_1_1CsvReader_a48db687dffdb33277075666f722d5c0b}{Csv\+Reader}} (char delimiter=\textquotesingle{},\textquotesingle{})
+\begin{DoxyCompactList}\small\item\em Конструктор. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classvar_1_1CsvReader_a5b547e9ce74dd61d6b7b572da0d0f882}{parse\+Line}} (const std\+::string \&line) const
+\begin{DoxyCompactList}\small\item\em Разбирает строку CSV. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{classvar_1_1CsvReader_a64e892218a5a46e64af764c8b75118d0}{delimiter\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Парсер CSV строк. 
+
+Низкоуровневый класс, отвечающий за разделение строки на токены по заданному разделителю. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classvar_1_1CsvReader_a48db687dffdb33277075666f722d5c0b}\label{classvar_1_1CsvReader_a48db687dffdb33277075666f722d5c0b} 
+\index{var::CsvReader@{var::CsvReader}!CsvReader@{CsvReader}}
+\index{CsvReader@{CsvReader}!var::CsvReader@{var::CsvReader}}
+\doxysubsubsection{\texorpdfstring{CsvReader()}{CsvReader()}}
+{\footnotesize\ttfamily var\+::\+Csv\+Reader\+::\+Csv\+Reader (\begin{DoxyParamCaption}\item[{char}]{delimiter = {\ttfamily \textquotesingle{},\textquotesingle{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Конструктор. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delimiter} & Символ-\/разделитель (по умолчанию \textquotesingle{},\textquotesingle{}). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classvar_1_1CsvReader_a5b547e9ce74dd61d6b7b572da0d0f882}\label{classvar_1_1CsvReader_a5b547e9ce74dd61d6b7b572da0d0f882} 
+\index{var::CsvReader@{var::CsvReader}!parseLine@{parseLine}}
+\index{parseLine@{parseLine}!var::CsvReader@{var::CsvReader}}
+\doxysubsubsection{\texorpdfstring{parseLine()}{parseLine()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ var\+::\+Csv\+Reader\+::parse\+Line (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{line }\end{DoxyParamCaption}) const}
+
+
+
+Разбирает строку CSV. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em line} & Входящая строка (например, "{}2023-\/01-\/01,100.\+50"{}). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Вектор строк-\/токенов. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvar_1_1CsvReader_a5b547e9ce74dd61d6b7b572da0d0f882_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classvar_1_1CsvReader_a64e892218a5a46e64af764c8b75118d0}\label{classvar_1_1CsvReader_a64e892218a5a46e64af764c8b75118d0} 
+\index{var::CsvReader@{var::CsvReader}!delimiter\_@{delimiter\_}}
+\index{delimiter\_@{delimiter\_}!var::CsvReader@{var::CsvReader}}
+\doxysubsubsection{\texorpdfstring{delimiter\_}{delimiter\_}}
+{\footnotesize\ttfamily char var\+::\+Csv\+Reader\+::delimiter\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{DataLoader_8hpp}{Data\+Loader.\+hpp}}\item 
+\mbox{\hyperlink{DataLoader_8cpp}{Data\+Loader.\+cpp}}\end{DoxyCompactItemize}

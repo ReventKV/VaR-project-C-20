@@ -1,0 +1,15 @@
+<map id="var::HistoricalVaRCalculator::calculateVaR" name="var::HistoricalVaRCalculator::calculateVaR">
+<area shape="rect" id="Node000001" title="Вычисляет VaR." alt="" coords="5,133,209,173"/>
+<area shape="rect" id="Node000002" href="$classvar_1_1MCStatistics.html#ab17d908a63b6f71871ad181f901a47dd" title="Добавить результат одного прогона (сценария)." alt="" coords="285,5,425,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="134,131,189,93,256,55,272,48,274,53,259,60,192,98,137,135"/>
+<area shape="rect" id="Node000003" href="$classvar_1_1RiskModel.html#a2276a3a3244bd51ccdb102940ed1b1de" title="Выравнивает временные ряды по единой шкале дат." alt="" coords="259,69,451,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="185,131,263,110,264,115,186,136"/>
+<area shape="rect" id="Node000004" href="$classvar_1_1ReturnCalculator.html#a4eb63d575da0606f0e579b626502b6ef" title="Вычисляет логарифмические доходности." alt="" coords="275,133,435,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="210,151,261,151,261,156,210,156"/>
+<area shape="rect" id="Node000006" href="$classvar_1_1MCStatistics.html#a05f33ce6374d456a2b206edbd0cf7f7c" title="Вычисляет VaR на основе распределения убытков." alt="" coords="285,197,425,237"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="186,171,272,193,271,198,185,176"/>
+<area shape="rect" id="Node000007" href="$classvar_1_1Portfolio.html#acceaacad5da6a3a0d47490c60a93b534" title="Предоставляет доступ к списку позиций (только для чтения). Необходим калькуляторам риска для итерации..." alt="" coords="257,262,452,287"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="136,171,190,209,258,247,281,255,279,260,256,252,188,214,133,176"/>
+<area shape="rect" id="Node000005" href="$classvar_1_1TimeSeries.html#ac8bab0de4eab6515b77b8548f1a5ab48" title="Возвращает ссылку на внутренний вектор записей." alt="" coords="500,141,705,166"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="435,151,486,151,486,156,435,156"/>
+</map>

@@ -1,0 +1,119 @@
+\doxysection{var\+::MCStatistics Class Reference}
+\hypertarget{classvar_1_1MCStatistics}{}\label{classvar_1_1MCStatistics}\index{var::MCStatistics@{var::MCStatistics}}
+
+
+Сборщик статистики симуляций.  
+
+
+
+
+{\ttfamily \#include $<$MCStatistics.\+hpp$>$}
+
+
+
+Collaboration diagram for var\+::MCStatistics\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=173pt]{classvar_1_1MCStatistics__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classvar_1_1MCStatistics_ab17d908a63b6f71871ad181f901a47dd}{add\+Result}} (double pnl)
+\begin{DoxyCompactList}\small\item\em Добавить результат одного прогона (сценария). \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classvar_1_1MCStatistics_a05f33ce6374d456a2b206edbd0cf7f7c}{compute\+VaR}} (double confidence)
+\begin{DoxyCompactList}\small\item\em Вычисляет VaR на основе распределения убытков. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classvar_1_1MCStatistics_aab68f7074bcd7fe6185005b844919d94}{size}} () const
+\begin{DoxyCompactList}\small\item\em Количество собранных сценариев. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classvar_1_1MCStatistics_aa21a1f467768eae9c5aa097af8e9f653}{results\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Сборщик статистики симуляций. 
+
+Агрегирует результаты (P\&L) всех путей Монте-\/Карло или Исторического метода и вычисляет итоговый VaR. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classvar_1_1MCStatistics_ab17d908a63b6f71871ad181f901a47dd}\label{classvar_1_1MCStatistics_ab17d908a63b6f71871ad181f901a47dd} 
+\index{var::MCStatistics@{var::MCStatistics}!addResult@{addResult}}
+\index{addResult@{addResult}!var::MCStatistics@{var::MCStatistics}}
+\doxysubsubsection{\texorpdfstring{addResult()}{addResult()}}
+{\footnotesize\ttfamily void var\+::\+MCStatistics\+::add\+Result (\begin{DoxyParamCaption}\item[{double}]{pnl }\end{DoxyParamCaption})}
+
+
+
+Добавить результат одного прогона (сценария). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pnl} & Прибыль или убыток (Profit \& Loss). \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvar_1_1MCStatistics_ab17d908a63b6f71871ad181f901a47dd_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classvar_1_1MCStatistics_a05f33ce6374d456a2b206edbd0cf7f7c}\label{classvar_1_1MCStatistics_a05f33ce6374d456a2b206edbd0cf7f7c} 
+\index{var::MCStatistics@{var::MCStatistics}!computeVaR@{computeVaR}}
+\index{computeVaR@{computeVaR}!var::MCStatistics@{var::MCStatistics}}
+\doxysubsubsection{\texorpdfstring{computeVaR()}{computeVaR()}}
+{\footnotesize\ttfamily double var\+::\+MCStatistics\+::compute\+VaR (\begin{DoxyParamCaption}\item[{double}]{confidence }\end{DoxyParamCaption})}
+
+
+
+Вычисляет VaR на основе распределения убытков. 
+
+Использует оптимизированный алгоритм std\+::nth\+\_\+element (O(\+N)) вместо полной сортировки.
+
+
+\begin{DoxyParams}{Parameters}
+{\em confidence} & Уровень доверия (0.\+0 -\/ 1.\+0). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Положительное значение VaR. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvar_1_1MCStatistics_a05f33ce6374d456a2b206edbd0cf7f7c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classvar_1_1MCStatistics_aab68f7074bcd7fe6185005b844919d94}\label{classvar_1_1MCStatistics_aab68f7074bcd7fe6185005b844919d94} 
+\index{var::MCStatistics@{var::MCStatistics}!size@{size}}
+\index{size@{size}!var::MCStatistics@{var::MCStatistics}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily size\+\_\+t var\+::\+MCStatistics\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Количество собранных сценариев. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classvar_1_1MCStatistics_aa21a1f467768eae9c5aa097af8e9f653}\label{classvar_1_1MCStatistics_aa21a1f467768eae9c5aa097af8e9f653} 
+\index{var::MCStatistics@{var::MCStatistics}!results\_@{results\_}}
+\index{results\_@{results\_}!var::MCStatistics@{var::MCStatistics}}
+\doxysubsubsection{\texorpdfstring{results\_}{results\_}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ var\+::\+MCStatistics\+::results\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{MCStatistics_8hpp}{MCStatistics.\+hpp}}\item 
+\mbox{\hyperlink{MCStatistics_8cpp}{MCStatistics.\+cpp}}\end{DoxyCompactItemize}

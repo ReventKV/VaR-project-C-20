@@ -1,0 +1,192 @@
+\doxysection{var\+::Monte\+Carlo\+Engine Class Reference}
+\hypertarget{classvar_1_1MonteCarloEngine}{}\label{classvar_1_1MonteCarloEngine}\index{var::MonteCarloEngine@{var::MonteCarloEngine}}
+
+
+Движок Монте-\/Карло на основе Геометрического Броуновского Движения (GBM).  
+
+
+
+
+{\ttfamily \#include $<$Simulation\+Engine.\+hpp$>$}
+
+
+
+Inheritance diagram for var\+::Monte\+Carlo\+Engine\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{classvar_1_1MonteCarloEngine__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for var\+::Monte\+Carlo\+Engine\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{classvar_1_1MonteCarloEngine__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classvar_1_1MonteCarloEngine_ac4633218c7f7a74a4327fd449777081d}{Monte\+Carlo\+Engine}} (const Eigen\+::\+Matrix\+Xd \&cov\+Matrix, double risk\+Free\+Rate=0.\+0, uint32\+\_\+t seed=42)
+\begin{DoxyCompactList}\small\item\em Конструктор. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{namespacevar_acc465a5d165b0ae17c8fd2211b6c949d}{Scenario}} $>$ \mbox{\hyperlink{classvar_1_1MonteCarloEngine_a912e5a056771dcb2bce58648e31ecd73}{simulate}} (int n\+Paths, int horizon\+Days) override
+\begin{DoxyCompactList}\small\item\em Запускает параллельную генерацию путей. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classvar_1_1SimulationEngine}{var\+::\+Simulation\+Engine}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classvar_1_1SimulationEngine_a58209e7d21f57079d86ed902ecaf8d31}{\texorpdfstring{$\sim$}{\string~}\+Simulation\+Engine}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{namespacevar_acc465a5d165b0ae17c8fd2211b6c949d}{Scenario}} $>$ \mbox{\hyperlink{classvar_1_1MonteCarloEngine_a146adbc727c02b0681c07446b8fa08f2}{simulate\+Batch}} (int n\+Paths, int horizon\+Days, uint32\+\_\+t batch\+Seed)
+\begin{DoxyCompactList}\small\item\em Внутренний метод для генерации части путей (исполняется в потоке). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{classvar_1_1MonteCarloEngine_a90b3738e44bd372d4eac573062898339}{cov\+Matrix\+\_\+}}
+\item 
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{classvar_1_1MonteCarloEngine_a8b6f4f81d07fbe849b7b774443944a23}{cholesky\+L\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Нижнетреугольная матрица (L \texorpdfstring{$\ast$}{*} L\texorpdfstring{$^\wedge$}{\string^}T = Sigma). \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classvar_1_1MonteCarloEngine_ae722f6e2815121f46b819b44668ab4d2}{risk\+Free\+Rate\+\_\+}}
+\item 
+size\+\_\+t \mbox{\hyperlink{classvar_1_1MonteCarloEngine_a9de7a5a0a2581b9f7cd0d0250f17fd47}{num\+Assets\+\_\+}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classvar_1_1MonteCarloEngine_a2483f84b8f010076a7df868e2da995f8}{seed\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Движок Монте-\/Карло на основе Геометрического Броуновского Движения (GBM). 
+
+Моделирует коррелированные случайные процессы для активов. Использует разложение Холецкого для корреляции и std\+::async для многопоточности. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classvar_1_1MonteCarloEngine_ac4633218c7f7a74a4327fd449777081d}\label{classvar_1_1MonteCarloEngine_ac4633218c7f7a74a4327fd449777081d} 
+\index{var::MonteCarloEngine@{var::MonteCarloEngine}!MonteCarloEngine@{MonteCarloEngine}}
+\index{MonteCarloEngine@{MonteCarloEngine}!var::MonteCarloEngine@{var::MonteCarloEngine}}
+\doxysubsubsection{\texorpdfstring{MonteCarloEngine()}{MonteCarloEngine()}}
+{\footnotesize\ttfamily var\+::\+Monte\+Carlo\+Engine\+::\+Monte\+Carlo\+Engine (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Matrix\+Xd \&}]{cov\+Matrix,  }\item[{double}]{risk\+Free\+Rate = {\ttfamily 0.0},  }\item[{uint32\+\_\+t}]{seed = {\ttfamily 42} }\end{DoxyParamCaption})}
+
+
+
+Конструктор. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cov\+Matrix} & Ковариационная матрица доходностей. \\
+\hline
+{\em risk\+Free\+Rate} & Безрисковая ставка (дневная). По умолчанию 0. \\
+\hline
+{\em seed} & Зерно генератора случайных чисел (для детерминированности). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & Если матрица не положительно определена (ошибка Холецкого). \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classvar_1_1MonteCarloEngine_a912e5a056771dcb2bce58648e31ecd73}\label{classvar_1_1MonteCarloEngine_a912e5a056771dcb2bce58648e31ecd73} 
+\index{var::MonteCarloEngine@{var::MonteCarloEngine}!simulate@{simulate}}
+\index{simulate@{simulate}!var::MonteCarloEngine@{var::MonteCarloEngine}}
+\doxysubsubsection{\texorpdfstring{simulate()}{simulate()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{namespacevar_acc465a5d165b0ae17c8fd2211b6c949d}{Scenario}} $>$ var\+::\+Monte\+Carlo\+Engine\+::simulate (\begin{DoxyParamCaption}\item[{int}]{n\+Paths,  }\item[{int}]{horizon\+Days }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Запускает параллельную генерацию путей. 
+
+Разбивает задачу на батчи и исполняет их на всех доступных ядрах CPU. 
+
+Implements \mbox{\hyperlink{classvar_1_1SimulationEngine_a04ac5b8b7d19f191cff545deb6e9b6fe}{var\+::\+Simulation\+Engine}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvar_1_1MonteCarloEngine_a912e5a056771dcb2bce58648e31ecd73_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvar_1_1MonteCarloEngine_a912e5a056771dcb2bce58648e31ecd73_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classvar_1_1MonteCarloEngine_a146adbc727c02b0681c07446b8fa08f2}\label{classvar_1_1MonteCarloEngine_a146adbc727c02b0681c07446b8fa08f2} 
+\index{var::MonteCarloEngine@{var::MonteCarloEngine}!simulateBatch@{simulateBatch}}
+\index{simulateBatch@{simulateBatch}!var::MonteCarloEngine@{var::MonteCarloEngine}}
+\doxysubsubsection{\texorpdfstring{simulateBatch()}{simulateBatch()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{namespacevar_acc465a5d165b0ae17c8fd2211b6c949d}{Scenario}} $>$ var\+::\+Monte\+Carlo\+Engine\+::simulate\+Batch (\begin{DoxyParamCaption}\item[{int}]{n\+Paths,  }\item[{int}]{horizon\+Days,  }\item[{uint32\+\_\+t}]{batch\+Seed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Внутренний метод для генерации части путей (исполняется в потоке). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em batch\+Seed} & Уникальный seed для конкретного потока. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvar_1_1MonteCarloEngine_a146adbc727c02b0681c07446b8fa08f2_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classvar_1_1MonteCarloEngine_a8b6f4f81d07fbe849b7b774443944a23}\label{classvar_1_1MonteCarloEngine_a8b6f4f81d07fbe849b7b774443944a23} 
+\index{var::MonteCarloEngine@{var::MonteCarloEngine}!choleskyL\_@{choleskyL\_}}
+\index{choleskyL\_@{choleskyL\_}!var::MonteCarloEngine@{var::MonteCarloEngine}}
+\doxysubsubsection{\texorpdfstring{choleskyL\_}{choleskyL\_}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix\+Xd var\+::\+Monte\+Carlo\+Engine\+::cholesky\+L\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Нижнетреугольная матрица (L \texorpdfstring{$\ast$}{*} L\texorpdfstring{$^\wedge$}{\string^}T = Sigma). 
+
+\Hypertarget{classvar_1_1MonteCarloEngine_a90b3738e44bd372d4eac573062898339}\label{classvar_1_1MonteCarloEngine_a90b3738e44bd372d4eac573062898339} 
+\index{var::MonteCarloEngine@{var::MonteCarloEngine}!covMatrix\_@{covMatrix\_}}
+\index{covMatrix\_@{covMatrix\_}!var::MonteCarloEngine@{var::MonteCarloEngine}}
+\doxysubsubsection{\texorpdfstring{covMatrix\_}{covMatrix\_}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix\+Xd var\+::\+Monte\+Carlo\+Engine\+::cov\+Matrix\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classvar_1_1MonteCarloEngine_a9de7a5a0a2581b9f7cd0d0250f17fd47}\label{classvar_1_1MonteCarloEngine_a9de7a5a0a2581b9f7cd0d0250f17fd47} 
+\index{var::MonteCarloEngine@{var::MonteCarloEngine}!numAssets\_@{numAssets\_}}
+\index{numAssets\_@{numAssets\_}!var::MonteCarloEngine@{var::MonteCarloEngine}}
+\doxysubsubsection{\texorpdfstring{numAssets\_}{numAssets\_}}
+{\footnotesize\ttfamily size\+\_\+t var\+::\+Monte\+Carlo\+Engine\+::num\+Assets\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classvar_1_1MonteCarloEngine_ae722f6e2815121f46b819b44668ab4d2}\label{classvar_1_1MonteCarloEngine_ae722f6e2815121f46b819b44668ab4d2} 
+\index{var::MonteCarloEngine@{var::MonteCarloEngine}!riskFreeRate\_@{riskFreeRate\_}}
+\index{riskFreeRate\_@{riskFreeRate\_}!var::MonteCarloEngine@{var::MonteCarloEngine}}
+\doxysubsubsection{\texorpdfstring{riskFreeRate\_}{riskFreeRate\_}}
+{\footnotesize\ttfamily double var\+::\+Monte\+Carlo\+Engine\+::risk\+Free\+Rate\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classvar_1_1MonteCarloEngine_a2483f84b8f010076a7df868e2da995f8}\label{classvar_1_1MonteCarloEngine_a2483f84b8f010076a7df868e2da995f8} 
+\index{var::MonteCarloEngine@{var::MonteCarloEngine}!seed\_@{seed\_}}
+\index{seed\_@{seed\_}!var::MonteCarloEngine@{var::MonteCarloEngine}}
+\doxysubsubsection{\texorpdfstring{seed\_}{seed\_}}
+{\footnotesize\ttfamily uint32\+\_\+t var\+::\+Monte\+Carlo\+Engine\+::seed\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{SimulationEngine_8hpp}{Simulation\+Engine.\+hpp}}\item 
+\mbox{\hyperlink{MonteCarloEngine_8cpp}{Monte\+Carlo\+Engine.\+cpp}}\end{DoxyCompactItemize}

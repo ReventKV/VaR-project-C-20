@@ -1,0 +1,17 @@
+<map id="runDemoMode" name="runDemoMode">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,80,124,105"/>
+<area shape="rect" id="Node000002" href="$classvar_1_1VaREngine.html#a5c58efddf8d7050257896c4c8dfc9e79" title="Добавить актив в анализ." alt="" coords="172,55,360,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="124,83,158,78,159,83,125,88"/>
+<area shape="rect" id="Node000008" href="$main_8cpp.html#a7bb2ad30e20680579ab1b897735a0ed8" title=" " alt="" coords="195,104,337,129"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="125,97,182,104,181,109,124,102"/>
+<area shape="rect" id="Node000003" href="$classvar_1_1Portfolio.html#a791593e1f74413ffb0c62e81731fb715" title="Добавляет позицию в портфель." alt="" coords="408,5,599,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="327,52,428,31,429,36,328,57"/>
+<area shape="rect" id="Node000004" href="$classvar_1_1DataLoader.html#a40a9c581f7ede5e4f6fe99ae5ef97773" title="Загружает данные из файла." alt="" coords="422,55,585,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="360,65,408,65,408,70,360,70"/>
+<area shape="rect" id="Node000007" href="$classvar_1_1TimeSeries.html#a4b80cd22d91b3c9d4aa92cd37bea3123" title="Возвращает количество записей в ряду." alt="" coords="424,104,583,129"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="328,77,429,99,428,104,327,83"/>
+<area shape="rect" id="Node000005" href="$classvar_1_1TimeSeries.html#a581fcdb02d214bc75d8961498f385a10" title="Добавляет новую запись в конец ряда." alt="" coords="665,31,821,56"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="585,57,651,50,651,55,585,62"/>
+<area shape="rect" id="Node000006" href="$classvar_1_1CsvReader.html#a5b547e9ce74dd61d6b7b572da0d0f882" title="Разбирает строку CSV." alt="" coords="647,80,839,105"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="585,73,633,78,633,84,585,79"/>
+</map>

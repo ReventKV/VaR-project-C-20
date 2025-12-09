@@ -1,0 +1,7 @@
+<map id="var::DataLoader::load" name="var::DataLoader::load">
+<area shape="rect" id="Node000001" title="Загружает данные из файла." alt="" coords="5,31,168,56"/>
+<area shape="rect" id="Node000002" href="$classvar_1_1TimeSeries.html#a581fcdb02d214bc75d8961498f385a10" title="Добавляет новую запись в конец ряда." alt="" coords="234,5,390,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,32,220,26,220,31,169,37"/>
+<area shape="rect" id="Node000003" href="$classvar_1_1CsvReader.html#a5b547e9ce74dd61d6b7b572da0d0f882" title="Разбирает строку CSV." alt="" coords="216,55,408,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="169,49,203,53,202,58,168,55"/>
+</map>

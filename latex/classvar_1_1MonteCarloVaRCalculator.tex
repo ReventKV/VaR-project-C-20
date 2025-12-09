@@ -1,0 +1,157 @@
+\doxysection{var\+::Monte\+Carlo\+Va\+RCalculator Class Reference}
+\hypertarget{classvar_1_1MonteCarloVaRCalculator}{}\label{classvar_1_1MonteCarloVaRCalculator}\index{var::MonteCarloVaRCalculator@{var::MonteCarloVaRCalculator}}
+
+
+Калькулятор VaR методом Монте-\/Карло.  
+
+
+
+
+{\ttfamily \#include $<$Monte\+Carlo\+Va\+RCalculator.\+hpp$>$}
+
+
+
+Inheritance diagram for var\+::Monte\+Carlo\+Va\+RCalculator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{classvar_1_1MonteCarloVaRCalculator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for var\+::Monte\+Carlo\+Va\+RCalculator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{classvar_1_1MonteCarloVaRCalculator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classvar_1_1MonteCarloVaRCalculator_a01dbe4a04d4d3e373630fd0089a5d8c7}{Monte\+Carlo\+Va\+RCalculator}} (int num\+Paths, std\+::map$<$ std\+::string, \mbox{\hyperlink{classvar_1_1TimeSeries}{Time\+Series}} $>$ market\+Data, uint32\+\_\+t seed=42)
+\begin{DoxyCompactList}\small\item\em Конструктор. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classvar_1_1MonteCarloVaRCalculator_a395e29493af5d757dfe7a45e236aa46a}{calculate\+VaR}} (const \mbox{\hyperlink{classvar_1_1Portfolio}{Portfolio}} \&portfolio, double confidence, int horizon) const override
+\begin{DoxyCompactList}\small\item\em Вычисляет величину риска (VaR) в валюте портфеля. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classvar_1_1VaRCalculator}{var\+::\+Va\+RCalculator}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classvar_1_1VaRCalculator_a7fc7d6f996a041bef7b95381cad04b3d}{\texorpdfstring{$\sim$}{\string~}\+Va\+RCalculator}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classvar_1_1MonteCarloVaRCalculator_a900ed6ec952d657ae652012f27252584}{num\+Paths\+\_\+}}
+\item 
+std\+::map$<$ std\+::string, \mbox{\hyperlink{classvar_1_1TimeSeries}{Time\+Series}} $>$ \mbox{\hyperlink{classvar_1_1MonteCarloVaRCalculator_a31ef03b51f75d48f4972cf923e7cf94b}{market\+Data\+\_\+}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classvar_1_1MonteCarloVaRCalculator_a2669268466bfcaa32dd829c1c1dce138}{seed\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Калькулятор VaR методом Монте-\/Карло. 
+
+Реализует полный цикл стохастического моделирования\+:
+\begin{DoxyEnumerate}
+\item Построение модели ковариаций.
+\item Параллельная генерация сценариев (GBM).
+\item Переоценка портфеля (Valuation).
+\item Сбор статистики и расчет квантиля. 
+\end{DoxyEnumerate}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classvar_1_1MonteCarloVaRCalculator_a01dbe4a04d4d3e373630fd0089a5d8c7}\label{classvar_1_1MonteCarloVaRCalculator_a01dbe4a04d4d3e373630fd0089a5d8c7} 
+\index{var::MonteCarloVaRCalculator@{var::MonteCarloVaRCalculator}!MonteCarloVaRCalculator@{MonteCarloVaRCalculator}}
+\index{MonteCarloVaRCalculator@{MonteCarloVaRCalculator}!var::MonteCarloVaRCalculator@{var::MonteCarloVaRCalculator}}
+\doxysubsubsection{\texorpdfstring{MonteCarloVaRCalculator()}{MonteCarloVaRCalculator()}}
+{\footnotesize\ttfamily var\+::\+Monte\+Carlo\+Va\+RCalculator\+::\+Monte\+Carlo\+Va\+RCalculator (\begin{DoxyParamCaption}\item[{int}]{num\+Paths,  }\item[{std\+::map$<$ std\+::string, \mbox{\hyperlink{classvar_1_1TimeSeries}{Time\+Series}} $>$}]{market\+Data,  }\item[{uint32\+\_\+t}]{seed = {\ttfamily 42} }\end{DoxyParamCaption})}
+
+
+
+Конструктор. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+Paths} & Количество сценариев (рекомендуется \texorpdfstring{$>$}{>}= 10,000). \\
+\hline
+{\em market\+Data} & Рыночные данные. \\
+\hline
+{\em seed} & Фиксированное зерно RNG (по умолчанию 42). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classvar_1_1MonteCarloVaRCalculator_a395e29493af5d757dfe7a45e236aa46a}\label{classvar_1_1MonteCarloVaRCalculator_a395e29493af5d757dfe7a45e236aa46a} 
+\index{var::MonteCarloVaRCalculator@{var::MonteCarloVaRCalculator}!calculateVaR@{calculateVaR}}
+\index{calculateVaR@{calculateVaR}!var::MonteCarloVaRCalculator@{var::MonteCarloVaRCalculator}}
+\doxysubsubsection{\texorpdfstring{calculateVaR()}{calculateVaR()}}
+{\footnotesize\ttfamily double var\+::\+Monte\+Carlo\+Va\+RCalculator\+::calculate\+VaR (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classvar_1_1Portfolio}{Portfolio}} \&}]{portfolio,  }\item[{double}]{confidence,  }\item[{int}]{horizon }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Вычисляет величину риска (VaR) в валюте портфеля. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em portfolio} & Портфель для оценки. \\
+\hline
+{\em confidence} & Уровень доверия (например, 0.\+95 для 95\% или 0.\+99 для 99\%). \\
+\hline
+{\em horizon} & Горизонт инвестирования в днях. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Положительное число, представляющее максимальный ожидаемый убыток. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classvar_1_1VaRCalculator_a4a08d218c4b9d43f20c5a50cee554b90}{var\+::\+Va\+RCalculator}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvar_1_1MonteCarloVaRCalculator_a395e29493af5d757dfe7a45e236aa46a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvar_1_1MonteCarloVaRCalculator_a395e29493af5d757dfe7a45e236aa46a_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classvar_1_1MonteCarloVaRCalculator_a31ef03b51f75d48f4972cf923e7cf94b}\label{classvar_1_1MonteCarloVaRCalculator_a31ef03b51f75d48f4972cf923e7cf94b} 
+\index{var::MonteCarloVaRCalculator@{var::MonteCarloVaRCalculator}!marketData\_@{marketData\_}}
+\index{marketData\_@{marketData\_}!var::MonteCarloVaRCalculator@{var::MonteCarloVaRCalculator}}
+\doxysubsubsection{\texorpdfstring{marketData\_}{marketData\_}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, \mbox{\hyperlink{classvar_1_1TimeSeries}{Time\+Series}}$>$ var\+::\+Monte\+Carlo\+Va\+RCalculator\+::market\+Data\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classvar_1_1MonteCarloVaRCalculator_a900ed6ec952d657ae652012f27252584}\label{classvar_1_1MonteCarloVaRCalculator_a900ed6ec952d657ae652012f27252584} 
+\index{var::MonteCarloVaRCalculator@{var::MonteCarloVaRCalculator}!numPaths\_@{numPaths\_}}
+\index{numPaths\_@{numPaths\_}!var::MonteCarloVaRCalculator@{var::MonteCarloVaRCalculator}}
+\doxysubsubsection{\texorpdfstring{numPaths\_}{numPaths\_}}
+{\footnotesize\ttfamily int var\+::\+Monte\+Carlo\+Va\+RCalculator\+::num\+Paths\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classvar_1_1MonteCarloVaRCalculator_a2669268466bfcaa32dd829c1c1dce138}\label{classvar_1_1MonteCarloVaRCalculator_a2669268466bfcaa32dd829c1c1dce138} 
+\index{var::MonteCarloVaRCalculator@{var::MonteCarloVaRCalculator}!seed\_@{seed\_}}
+\index{seed\_@{seed\_}!var::MonteCarloVaRCalculator@{var::MonteCarloVaRCalculator}}
+\doxysubsubsection{\texorpdfstring{seed\_}{seed\_}}
+{\footnotesize\ttfamily uint32\+\_\+t var\+::\+Monte\+Carlo\+Va\+RCalculator\+::seed\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{MonteCarloVaRCalculator_8hpp}{Monte\+Carlo\+Va\+RCalculator.\+hpp}}\item 
+\mbox{\hyperlink{MonteCarloVaRCalculator_8cpp}{Monte\+Carlo\+Va\+RCalculator.\+cpp}}\end{DoxyCompactItemize}

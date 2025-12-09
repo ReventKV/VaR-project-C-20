@@ -1,0 +1,82 @@
+\doxysection{var\+::Simulation\+Engine Class Reference}
+\hypertarget{classvar_1_1SimulationEngine}{}\label{classvar_1_1SimulationEngine}\index{var::SimulationEngine@{var::SimulationEngine}}
+
+
+Абстрактный генератор рыночных сценариев.  
+
+
+
+
+{\ttfamily \#include $<$Simulation\+Engine.\+hpp$>$}
+
+
+
+Inheritance diagram for var\+::Simulation\+Engine\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{classvar_1_1SimulationEngine__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for var\+::Simulation\+Engine\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{classvar_1_1SimulationEngine__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classvar_1_1SimulationEngine_a58209e7d21f57079d86ed902ecaf8d31}{\texorpdfstring{$\sim$}{\string~}\+Simulation\+Engine}} ()=default
+\item 
+virtual std\+::vector$<$ \mbox{\hyperlink{namespacevar_acc465a5d165b0ae17c8fd2211b6c949d}{Scenario}} $>$ \mbox{\hyperlink{classvar_1_1SimulationEngine_a04ac5b8b7d19f191cff545deb6e9b6fe}{simulate}} (int n\+Paths, int horizon\+Days)=0
+\begin{DoxyCompactList}\small\item\em Генерирует набор сценариев развития рынка. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Абстрактный генератор рыночных сценариев. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classvar_1_1SimulationEngine_a58209e7d21f57079d86ed902ecaf8d31}\label{classvar_1_1SimulationEngine_a58209e7d21f57079d86ed902ecaf8d31} 
+\index{var::SimulationEngine@{var::SimulationEngine}!````~SimulationEngine@{\texorpdfstring{$\sim$}{\string~}SimulationEngine}}
+\index{````~SimulationEngine@{\texorpdfstring{$\sim$}{\string~}SimulationEngine}!var::SimulationEngine@{var::SimulationEngine}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}SimulationEngine()}{\string~SimulationEngine()}}
+{\footnotesize\ttfamily virtual var\+::\+Simulation\+Engine\+::\texorpdfstring{$\sim$}{\string~}\+Simulation\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classvar_1_1SimulationEngine_a04ac5b8b7d19f191cff545deb6e9b6fe}\label{classvar_1_1SimulationEngine_a04ac5b8b7d19f191cff545deb6e9b6fe} 
+\index{var::SimulationEngine@{var::SimulationEngine}!simulate@{simulate}}
+\index{simulate@{simulate}!var::SimulationEngine@{var::SimulationEngine}}
+\doxysubsubsection{\texorpdfstring{simulate()}{simulate()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$ \mbox{\hyperlink{namespacevar_acc465a5d165b0ae17c8fd2211b6c949d}{Scenario}} $>$ var\+::\+Simulation\+Engine\+::simulate (\begin{DoxyParamCaption}\item[{int}]{n\+Paths,  }\item[{int}]{horizon\+Days }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Генерирует набор сценариев развития рынка. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n\+Paths} & Количество путей симуляции. \\
+\hline
+{\em horizon\+Days} & Горизонт прогноза в днях. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Вектор сценариев (каждый сценарий — вектор доходностей активов). 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classvar_1_1MonteCarloEngine_a912e5a056771dcb2bce58648e31ecd73}{var\+::\+Monte\+Carlo\+Engine}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{SimulationEngine_8hpp}{Simulation\+Engine.\+hpp}}\end{DoxyCompactItemize}

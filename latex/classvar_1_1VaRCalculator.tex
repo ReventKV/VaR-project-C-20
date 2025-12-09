@@ -1,0 +1,86 @@
+\doxysection{var\+::Va\+RCalculator Class Reference}
+\hypertarget{classvar_1_1VaRCalculator}{}\label{classvar_1_1VaRCalculator}\index{var::VaRCalculator@{var::VaRCalculator}}
+
+
+Абстрактный интерфейс стратегии расчета Value at Risk (VaR).  
+
+
+
+
+{\ttfamily \#include $<$Va\+RCalculator.\+hpp$>$}
+
+
+
+Inheritance diagram for var\+::Va\+RCalculator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvar_1_1VaRCalculator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for var\+::Va\+RCalculator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=186pt]{classvar_1_1VaRCalculator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classvar_1_1VaRCalculator_a7fc7d6f996a041bef7b95381cad04b3d}{\texorpdfstring{$\sim$}{\string~}\+Va\+RCalculator}} ()=default
+\item 
+virtual double \mbox{\hyperlink{classvar_1_1VaRCalculator_a4a08d218c4b9d43f20c5a50cee554b90}{calculate\+VaR}} (const \mbox{\hyperlink{classvar_1_1Portfolio}{Portfolio}} \&portfolio, double confidence, int horizon) const =0
+\begin{DoxyCompactList}\small\item\em Вычисляет величину риска (VaR) в валюте портфеля. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Абстрактный интерфейс стратегии расчета Value at Risk (VaR). 
+
+Определяет единый контракт для всех алгоритмов оценки риска (Параметрический, Монте-\/Карло, Исторический). Паттерн "{}\+Strategy"{}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classvar_1_1VaRCalculator_a7fc7d6f996a041bef7b95381cad04b3d}\label{classvar_1_1VaRCalculator_a7fc7d6f996a041bef7b95381cad04b3d} 
+\index{var::VaRCalculator@{var::VaRCalculator}!````~VaRCalculator@{\texorpdfstring{$\sim$}{\string~}VaRCalculator}}
+\index{````~VaRCalculator@{\texorpdfstring{$\sim$}{\string~}VaRCalculator}!var::VaRCalculator@{var::VaRCalculator}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}VaRCalculator()}{\string~VaRCalculator()}}
+{\footnotesize\ttfamily virtual var\+::\+Va\+RCalculator\+::\texorpdfstring{$\sim$}{\string~}\+Va\+RCalculator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classvar_1_1VaRCalculator_a4a08d218c4b9d43f20c5a50cee554b90}\label{classvar_1_1VaRCalculator_a4a08d218c4b9d43f20c5a50cee554b90} 
+\index{var::VaRCalculator@{var::VaRCalculator}!calculateVaR@{calculateVaR}}
+\index{calculateVaR@{calculateVaR}!var::VaRCalculator@{var::VaRCalculator}}
+\doxysubsubsection{\texorpdfstring{calculateVaR()}{calculateVaR()}}
+{\footnotesize\ttfamily virtual double var\+::\+Va\+RCalculator\+::calculate\+VaR (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classvar_1_1Portfolio}{Portfolio}} \&}]{portfolio,  }\item[{double}]{confidence,  }\item[{int}]{horizon }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Вычисляет величину риска (VaR) в валюте портфеля. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em portfolio} & Портфель для оценки. \\
+\hline
+{\em confidence} & Уровень доверия (например, 0.\+95 для 95\% или 0.\+99 для 99\%). \\
+\hline
+{\em horizon} & Горизонт инвестирования в днях. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Положительное число, представляющее максимальный ожидаемый убыток. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classvar_1_1HistoricalVaRCalculator_a4106672e0e1166885d9b347fc4991337}{var\+::\+Historical\+Va\+RCalculator}}, \mbox{\hyperlink{classvar_1_1MonteCarloVaRCalculator_a395e29493af5d757dfe7a45e236aa46a}{var\+::\+Monte\+Carlo\+Va\+RCalculator}}, and \mbox{\hyperlink{classvar_1_1ParametricVaRCalculator_ae89329fc76e92ffce9cb6fccad788134}{var\+::\+Parametric\+Va\+RCalculator}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{VaRCalculator_8hpp}{Va\+RCalculator.\+hpp}}\end{DoxyCompactItemize}

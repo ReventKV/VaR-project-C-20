@@ -1,0 +1,5 @@
+if(EXISTS "/home/mmlezh/Desktop/VaR/VaRProject/build/tests/var_tests[1]_tests.cmake")
+  include("/home/mmlezh/Desktop/VaR/VaRProject/build/tests/var_tests[1]_tests.cmake")
+else()
+  add_test(var_tests_NOT_BUILT var_tests_NOT_BUILT)
+endif()

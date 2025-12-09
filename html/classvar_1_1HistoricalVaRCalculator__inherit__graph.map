@@ -1,0 +1,5 @@
+<map id="var::HistoricalVaRCalculator" name="var::HistoricalVaRCalculator">
+<area shape="rect" id="Node000001" title="Калькулятор Исторического VaR (Historical Simulation)." alt="" coords="5,139,201,224"/>
+<area shape="rect" id="Node000002" href="$classvar_1_1VaRCalculator.html" title="Абстрактный интерфейс стратегии расчета Value at Risk (VaR)." alt="" coords="33,5,174,91"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="106,104,106,138,101,138,101,104"/>
+</map>

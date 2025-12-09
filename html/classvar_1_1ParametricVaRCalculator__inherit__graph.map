@@ -1,0 +1,5 @@
+<map id="var::ParametricVaRCalculator" name="var::ParametricVaRCalculator">
+<area shape="rect" id="Node000001" title="Калькулятор параметрического VaR (Delta&#45;Normal / Variance&#45;Covariance)." alt="" coords="5,139,209,264"/>
+<area shape="rect" id="Node000002" href="$classvar_1_1VaRCalculator.html" title="Абстрактный интерфейс стратегии расчета Value at Risk (VaR)." alt="" coords="37,5,178,91"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="110,104,110,138,105,138,105,104"/>
+</map>

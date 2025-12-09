@@ -1,0 +1,7 @@
+<map id="HistoricalVaRCalculator.hpp" name="HistoricalVaRCalculator.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="97,5,299,31"/>
+<area shape="rect" id="Node000002" href="$HistoricalVaRCalculator_8cpp.html" title=" " alt="" coords="5,79,207,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="174,41,123,81,119,76,171,37"/>
+<area shape="rect" id="Node000003" href="$VaREngine_8cpp.html" title=" " alt="" coords="231,79,349,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="225,37,277,76,273,81,222,41"/>
+</map>

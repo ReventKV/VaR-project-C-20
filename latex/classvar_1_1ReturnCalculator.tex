@@ -1,0 +1,81 @@
+\doxysection{var\+::Return\+Calculator Class Reference}
+\hypertarget{classvar_1_1ReturnCalculator}{}\label{classvar_1_1ReturnCalculator}\index{var::ReturnCalculator@{var::ReturnCalculator}}
+
+
+Утилита для расчета доходностей.  
+
+
+
+
+{\ttfamily \#include $<$Return\+Calculator.\+hpp$>$}
+
+
+
+Collaboration diagram for var\+::Return\+Calculator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{classvar_1_1ReturnCalculator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ double $>$ \mbox{\hyperlink{classvar_1_1ReturnCalculator_a4eb63d575da0606f0e579b626502b6ef}{compute\+Log\+Returns}} (const \mbox{\hyperlink{classvar_1_1TimeSeries}{Time\+Series}} \&ts)
+\begin{DoxyCompactList}\small\item\em Вычисляет логарифмические доходности. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Утилита для расчета доходностей. 
+
+Содержит статические методы для преобразования цен в доходности. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classvar_1_1ReturnCalculator_a4eb63d575da0606f0e579b626502b6ef}\label{classvar_1_1ReturnCalculator_a4eb63d575da0606f0e579b626502b6ef} 
+\index{var::ReturnCalculator@{var::ReturnCalculator}!computeLogReturns@{computeLogReturns}}
+\index{computeLogReturns@{computeLogReturns}!var::ReturnCalculator@{var::ReturnCalculator}}
+\doxysubsubsection{\texorpdfstring{computeLogReturns()}{computeLogReturns()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ var\+::\+Return\+Calculator\+::compute\+Log\+Returns (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classvar_1_1TimeSeries}{Time\+Series}} \&}]{ts }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Вычисляет логарифмические доходности. 
+
+Formula\+: r\+\_\+i = ln(P\+\_\+i / P\+\_\+\{i-\/1\}) Лог-\/доходности предпочтительны для моделирования, так как они аддитивны во времени.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ts} & Временной ряд цен. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Вектор доходностей (размером N-\/1). 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & Если цены \texorpdfstring{$<$}{<}= 0 или данных недостаточно. \\
+\hline
+\end{DoxyExceptions}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvar_1_1ReturnCalculator_a4eb63d575da0606f0e579b626502b6ef_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvar_1_1ReturnCalculator_a4eb63d575da0606f0e579b626502b6ef_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ReturnCalculator_8hpp}{Return\+Calculator.\+hpp}}\item 
+\mbox{\hyperlink{ReturnCalculator_8cpp}{Return\+Calculator.\+cpp}}\end{DoxyCompactItemize}

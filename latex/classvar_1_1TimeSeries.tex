@@ -1,0 +1,131 @@
+\doxysection{var\+::Time\+Series Class Reference}
+\hypertarget{classvar_1_1TimeSeries}{}\label{classvar_1_1TimeSeries}\index{var::TimeSeries@{var::TimeSeries}}
+
+
+Временной ряд (история цен).  
+
+
+
+
+{\ttfamily \#include $<$Time\+Series.\+hpp$>$}
+
+
+
+Collaboration diagram for var\+::Time\+Series\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=179pt]{classvar_1_1TimeSeries__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classvar_1_1TimeSeries_a581fcdb02d214bc75d8961498f385a10}{add}} (const \mbox{\hyperlink{structvar_1_1PriceRecord}{Price\+Record}} \&record)
+\begin{DoxyCompactList}\small\item\em Добавляет новую запись в конец ряда. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classvar_1_1TimeSeries_a74eb9df44499c41170a8168c655c8020}{get\+Price\+Series}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает вектор цен (без дат). \end{DoxyCompactList}\item 
+const std\+::vector$<$ \mbox{\hyperlink{structvar_1_1PriceRecord}{Price\+Record}} $>$ \& \mbox{\hyperlink{classvar_1_1TimeSeries_ac8bab0de4eab6515b77b8548f1a5ab48}{get\+Records}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает ссылку на внутренний вектор записей. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classvar_1_1TimeSeries_a4b80cd22d91b3c9d4aa92cd37bea3123}{size}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает количество записей в ряду. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structvar_1_1PriceRecord}{Price\+Record}} $>$ \mbox{\hyperlink{classvar_1_1TimeSeries_a7ecec1df59bce2a89b1f60f493854692}{records\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Временной ряд (история цен). 
+
+Класс-\/контейнер для хранения хронологической последовательности цен одного актива. Обеспечивает доступ к данным и вспомогательные методы конвертации. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classvar_1_1TimeSeries_a581fcdb02d214bc75d8961498f385a10}\label{classvar_1_1TimeSeries_a581fcdb02d214bc75d8961498f385a10} 
+\index{var::TimeSeries@{var::TimeSeries}!add@{add}}
+\index{add@{add}!var::TimeSeries@{var::TimeSeries}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void var\+::\+Time\+Series\+::add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structvar_1_1PriceRecord}{Price\+Record}} \&}]{record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Добавляет новую запись в конец ряда. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em record} & Заполненная структура \doxylink{structvar_1_1PriceRecord}{Price\+Record}. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvar_1_1TimeSeries_a581fcdb02d214bc75d8961498f385a10_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classvar_1_1TimeSeries_a74eb9df44499c41170a8168c655c8020}\label{classvar_1_1TimeSeries_a74eb9df44499c41170a8168c655c8020} 
+\index{var::TimeSeries@{var::TimeSeries}!getPriceSeries@{getPriceSeries}}
+\index{getPriceSeries@{getPriceSeries}!var::TimeSeries@{var::TimeSeries}}
+\doxysubsubsection{\texorpdfstring{getPriceSeries()}{getPriceSeries()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ var\+::\+Time\+Series\+::get\+Price\+Series (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Возвращает вектор цен (без дат). 
+
+Удобно для математических вычислений, где требуются только числовые ряды. \begin{DoxyReturn}{Returns}
+std\+::vector$<$double$>$ Список цен в хронологическом порядке. 
+\end{DoxyReturn}
+\Hypertarget{classvar_1_1TimeSeries_ac8bab0de4eab6515b77b8548f1a5ab48}\label{classvar_1_1TimeSeries_ac8bab0de4eab6515b77b8548f1a5ab48} 
+\index{var::TimeSeries@{var::TimeSeries}!getRecords@{getRecords}}
+\index{getRecords@{getRecords}!var::TimeSeries@{var::TimeSeries}}
+\doxysubsubsection{\texorpdfstring{getRecords()}{getRecords()}}
+{\footnotesize\ttfamily const std\+::vector$<$ \mbox{\hyperlink{structvar_1_1PriceRecord}{Price\+Record}} $>$ \& var\+::\+Time\+Series\+::get\+Records (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Возвращает ссылку на внутренний вектор записей. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvar_1_1TimeSeries_ac8bab0de4eab6515b77b8548f1a5ab48_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classvar_1_1TimeSeries_a4b80cd22d91b3c9d4aa92cd37bea3123}\label{classvar_1_1TimeSeries_a4b80cd22d91b3c9d4aa92cd37bea3123} 
+\index{var::TimeSeries@{var::TimeSeries}!size@{size}}
+\index{size@{size}!var::TimeSeries@{var::TimeSeries}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily size\+\_\+t var\+::\+Time\+Series\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Возвращает количество записей в ряду. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvar_1_1TimeSeries_a4b80cd22d91b3c9d4aa92cd37bea3123_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classvar_1_1TimeSeries_a7ecec1df59bce2a89b1f60f493854692}\label{classvar_1_1TimeSeries_a7ecec1df59bce2a89b1f60f493854692} 
+\index{var::TimeSeries@{var::TimeSeries}!records\_@{records\_}}
+\index{records\_@{records\_}!var::TimeSeries@{var::TimeSeries}}
+\doxysubsubsection{\texorpdfstring{records\_}{records\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structvar_1_1PriceRecord}{Price\+Record}}$>$ var\+::\+Time\+Series\+::records\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{TimeSeries_8hpp}{Time\+Series.\+hpp}}\end{DoxyCompactItemize}

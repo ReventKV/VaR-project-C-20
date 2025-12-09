@@ -1,0 +1,120 @@
+\doxysection{var\+::Portfolio Class Reference}
+\hypertarget{classvar_1_1Portfolio}{}\label{classvar_1_1Portfolio}\index{var::Portfolio@{var::Portfolio}}
+
+
+Инвестиционный портфель.  
+
+
+
+
+{\ttfamily \#include $<$Portfolio.\+hpp$>$}
+
+
+
+Collaboration diagram for var\+::Portfolio\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{classvar_1_1Portfolio__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classvar_1_1Portfolio_a791593e1f74413ffb0c62e81731fb715}{add\+Position}} (const \mbox{\hyperlink{classvar_1_1Position}{Position}} \&pos)
+\begin{DoxyCompactList}\small\item\em Добавляет позицию в портфель. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classvar_1_1Portfolio_a6e1d29882e53d52821ce71c21ce66ff5}{get\+Total\+Value}} () const
+\begin{DoxyCompactList}\small\item\em Считает полную стоимость портфеля (Net Asset Value). Суммирует стоимость всех входящих позиций по текущим ценам. \end{DoxyCompactList}\item 
+const std\+::vector$<$ \mbox{\hyperlink{classvar_1_1Position}{Position}} $>$ \& \mbox{\hyperlink{classvar_1_1Portfolio_acceaacad5da6a3a0d47490c60a93b534}{get\+Positions}} () const
+\begin{DoxyCompactList}\small\item\em Предоставляет доступ к списку позиций (только для чтения). Необходим калькуляторам риска для итерации по активам. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classvar_1_1Position}{Position}} $>$ \mbox{\hyperlink{classvar_1_1Portfolio_ae4634e19dda5b68af4ad7787e7efd95a}{positions\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Инвестиционный портфель. 
+
+Коллекция позиций. Предоставляет методы для агрегированной оценки стоимости. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classvar_1_1Portfolio_a791593e1f74413ffb0c62e81731fb715}\label{classvar_1_1Portfolio_a791593e1f74413ffb0c62e81731fb715} 
+\index{var::Portfolio@{var::Portfolio}!addPosition@{addPosition}}
+\index{addPosition@{addPosition}!var::Portfolio@{var::Portfolio}}
+\doxysubsubsection{\texorpdfstring{addPosition()}{addPosition()}}
+{\footnotesize\ttfamily void var\+::\+Portfolio\+::add\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classvar_1_1Position}{Position}} \&}]{pos }\end{DoxyParamCaption})}
+
+
+
+Добавляет позицию в портфель. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Объект позиции. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvar_1_1Portfolio_a791593e1f74413ffb0c62e81731fb715_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classvar_1_1Portfolio_acceaacad5da6a3a0d47490c60a93b534}\label{classvar_1_1Portfolio_acceaacad5da6a3a0d47490c60a93b534} 
+\index{var::Portfolio@{var::Portfolio}!getPositions@{getPositions}}
+\index{getPositions@{getPositions}!var::Portfolio@{var::Portfolio}}
+\doxysubsubsection{\texorpdfstring{getPositions()}{getPositions()}}
+{\footnotesize\ttfamily const std\+::vector$<$ \mbox{\hyperlink{classvar_1_1Position}{Position}} $>$ \& var\+::\+Portfolio\+::get\+Positions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Предоставляет доступ к списку позиций (только для чтения). Необходим калькуляторам риска для итерации по активам. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvar_1_1Portfolio_acceaacad5da6a3a0d47490c60a93b534_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classvar_1_1Portfolio_a6e1d29882e53d52821ce71c21ce66ff5}\label{classvar_1_1Portfolio_a6e1d29882e53d52821ce71c21ce66ff5} 
+\index{var::Portfolio@{var::Portfolio}!getTotalValue@{getTotalValue}}
+\index{getTotalValue@{getTotalValue}!var::Portfolio@{var::Portfolio}}
+\doxysubsubsection{\texorpdfstring{getTotalValue()}{getTotalValue()}}
+{\footnotesize\ttfamily double var\+::\+Portfolio\+::get\+Total\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Считает полную стоимость портфеля (Net Asset Value). Суммирует стоимость всех входящих позиций по текущим ценам. 
+
+\begin{DoxyReturn}{Returns}
+Общая стоимость в валюте активов. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvar_1_1Portfolio_a6e1d29882e53d52821ce71c21ce66ff5_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classvar_1_1Portfolio_ae4634e19dda5b68af4ad7787e7efd95a}\label{classvar_1_1Portfolio_ae4634e19dda5b68af4ad7787e7efd95a} 
+\index{var::Portfolio@{var::Portfolio}!positions\_@{positions\_}}
+\index{positions\_@{positions\_}!var::Portfolio@{var::Portfolio}}
+\doxysubsubsection{\texorpdfstring{positions\_}{positions\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classvar_1_1Position}{Position}}$>$ var\+::\+Portfolio\+::positions\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Portfolio_8hpp}{Portfolio.\+hpp}}\item 
+\mbox{\hyperlink{Portfolio_8cpp}{Portfolio.\+cpp}}\end{DoxyCompactItemize}

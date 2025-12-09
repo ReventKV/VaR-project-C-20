@@ -1,0 +1,135 @@
+\doxysection{var\+::Instrument Class Reference}
+\hypertarget{classvar_1_1Instrument}{}\label{classvar_1_1Instrument}\index{var::Instrument@{var::Instrument}}
+
+
+Финансовый инструмент (Актив).  
+
+
+
+
+{\ttfamily \#include $<$Instrument.\+hpp$>$}
+
+
+
+Collaboration diagram for var\+::Instrument\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=171pt]{classvar_1_1Instrument__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classvar_1_1Instrument_aa9f6b7b7ac6e756f5912770a40e3cd1f}{Instrument}} (std\+::string id, double price)
+\begin{DoxyCompactList}\small\item\em Создает новый инструмент. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classvar_1_1Instrument_a0f23fd33f73b43ca38dd54b4ab83a505}{\texorpdfstring{$\sim$}{\string~}\+Instrument}} ()=default
+\item 
+void \mbox{\hyperlink{classvar_1_1Instrument_a6914fb7baf93f8d95598aaaae8ca8220}{set\+Price}} (double new\+Price)
+\begin{DoxyCompactList}\small\item\em Обновляет рыночную цену. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classvar_1_1Instrument_af9044d711e59cffb93ffda0bc3ca9a62}{get\+Price}} () const
+\begin{DoxyCompactList}\small\item\em Получить текущую цену. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classvar_1_1Instrument_ae5a3ea7ba52a13594c16edce246cb9bd}{get\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Получить идентификатор (тикер). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classvar_1_1Instrument_aba097efd3abb1905f223e6bb2760dcd5}{id\+\_\+}}
+\item 
+double \mbox{\hyperlink{classvar_1_1Instrument_ac2545183590028f87b05a2e594d2ffee}{price\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Финансовый инструмент (Актив). 
+
+Базовая сущность, представляющая торгуемый актив (акцию, облигацию, товар, валюту). Хранит идентификатор и текущую рыночную цену. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classvar_1_1Instrument_aa9f6b7b7ac6e756f5912770a40e3cd1f}\label{classvar_1_1Instrument_aa9f6b7b7ac6e756f5912770a40e3cd1f} 
+\index{var::Instrument@{var::Instrument}!Instrument@{Instrument}}
+\index{Instrument@{Instrument}!var::Instrument@{var::Instrument}}
+\doxysubsubsection{\texorpdfstring{Instrument()}{Instrument()}}
+{\footnotesize\ttfamily var\+::\+Instrument\+::\+Instrument (\begin{DoxyParamCaption}\item[{std\+::string}]{id,  }\item[{double}]{price }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Создает новый инструмент. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Уникальный тикер (например, "{}\+AAPL"{}). \\
+\hline
+{\em price} & Текущая цена (должна быть неотрицательной). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classvar_1_1Instrument_a0f23fd33f73b43ca38dd54b4ab83a505}\label{classvar_1_1Instrument_a0f23fd33f73b43ca38dd54b4ab83a505} 
+\index{var::Instrument@{var::Instrument}!````~Instrument@{\texorpdfstring{$\sim$}{\string~}Instrument}}
+\index{````~Instrument@{\texorpdfstring{$\sim$}{\string~}Instrument}!var::Instrument@{var::Instrument}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Instrument()}{\string~Instrument()}}
+{\footnotesize\ttfamily virtual var\+::\+Instrument\+::\texorpdfstring{$\sim$}{\string~}\+Instrument (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classvar_1_1Instrument_ae5a3ea7ba52a13594c16edce246cb9bd}\label{classvar_1_1Instrument_ae5a3ea7ba52a13594c16edce246cb9bd} 
+\index{var::Instrument@{var::Instrument}!getId@{getId}}
+\index{getId@{getId}!var::Instrument@{var::Instrument}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily const std\+::string \& var\+::\+Instrument\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Получить идентификатор (тикер). 
+
+\Hypertarget{classvar_1_1Instrument_af9044d711e59cffb93ffda0bc3ca9a62}\label{classvar_1_1Instrument_af9044d711e59cffb93ffda0bc3ca9a62} 
+\index{var::Instrument@{var::Instrument}!getPrice@{getPrice}}
+\index{getPrice@{getPrice}!var::Instrument@{var::Instrument}}
+\doxysubsubsection{\texorpdfstring{getPrice()}{getPrice()}}
+{\footnotesize\ttfamily double var\+::\+Instrument\+::get\+Price (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Получить текущую цену. 
+
+\Hypertarget{classvar_1_1Instrument_a6914fb7baf93f8d95598aaaae8ca8220}\label{classvar_1_1Instrument_a6914fb7baf93f8d95598aaaae8ca8220} 
+\index{var::Instrument@{var::Instrument}!setPrice@{setPrice}}
+\index{setPrice@{setPrice}!var::Instrument@{var::Instrument}}
+\doxysubsubsection{\texorpdfstring{setPrice()}{setPrice()}}
+{\footnotesize\ttfamily void var\+::\+Instrument\+::set\+Price (\begin{DoxyParamCaption}\item[{double}]{new\+Price }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Обновляет рыночную цену. 
+
+Изменение цены здесь автоматически повлияет на оценку всех позиций, ссылающихся на этот инструмент. 
+\begin{DoxyParams}{Parameters}
+{\em new\+Price} & Новая цена. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Если цена \texorpdfstring{$<$}{<} 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classvar_1_1Instrument_aba097efd3abb1905f223e6bb2760dcd5}\label{classvar_1_1Instrument_aba097efd3abb1905f223e6bb2760dcd5} 
+\index{var::Instrument@{var::Instrument}!id\_@{id\_}}
+\index{id\_@{id\_}!var::Instrument@{var::Instrument}}
+\doxysubsubsection{\texorpdfstring{id\_}{id\_}}
+{\footnotesize\ttfamily std\+::string var\+::\+Instrument\+::id\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classvar_1_1Instrument_ac2545183590028f87b05a2e594d2ffee}\label{classvar_1_1Instrument_ac2545183590028f87b05a2e594d2ffee} 
+\index{var::Instrument@{var::Instrument}!price\_@{price\_}}
+\index{price\_@{price\_}!var::Instrument@{var::Instrument}}
+\doxysubsubsection{\texorpdfstring{price\_}{price\_}}
+{\footnotesize\ttfamily double var\+::\+Instrument\+::price\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Instrument_8hpp}{Instrument.\+hpp}}\end{DoxyCompactItemize}

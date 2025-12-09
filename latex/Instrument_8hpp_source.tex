@@ -1,0 +1,63 @@
+\doxysection{Instrument.\+hpp}
+\hypertarget{Instrument_8hpp_source}{}\label{Instrument_8hpp_source}\index{Instrument.hpp@{Instrument.hpp}}
+\mbox{\hyperlink{Instrument_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacevar}{var}}\ \{}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classvar_1_1Instrument}{Instrument}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{classvar_1_1Instrument_aa9f6b7b7ac6e756f5912770a40e3cd1f}{Instrument}}(std::string\ \textcolor{keywordtype}{id},\ \textcolor{keywordtype}{double}\ price)\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classvar_1_1Instrument_aba097efd3abb1905f223e6bb2760dcd5}{id\_}}(std::move(id)),\ \mbox{\hyperlink{classvar_1_1Instrument_ac2545183590028f87b05a2e594d2ffee}{price\_}}(price)\ \{\}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classvar_1_1Instrument_a0f23fd33f73b43ca38dd54b4ab83a505}{\string~Instrument}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classvar_1_1Instrument_a6914fb7baf93f8d95598aaaae8ca8220}{setPrice}}(\textcolor{keywordtype}{double}\ newPrice)\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (newPrice\ <\ 0)\ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Price\ cannot\ be\ negative"{}});}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classvar_1_1Instrument_ac2545183590028f87b05a2e594d2ffee}{price\_}}\ =\ newPrice;}
+\DoxyCodeLine{00040\ \ \ \ \ \}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classvar_1_1Instrument_af9044d711e59cffb93ffda0bc3ca9a62}{getPrice}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classvar_1_1Instrument_ac2545183590028f87b05a2e594d2ffee}{price\_}};\ \}}
+\DoxyCodeLine{00044\ \ \ \ \ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{classvar_1_1Instrument_ae5a3ea7ba52a13594c16edce246cb9bd}{getId}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classvar_1_1Instrument_aba097efd3abb1905f223e6bb2760dcd5}{id\_}};\ \}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00049\ \ \ \ \ std::string\ \mbox{\hyperlink{classvar_1_1Instrument_aba097efd3abb1905f223e6bb2760dcd5}{id\_}};}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classvar_1_1Instrument_ac2545183590028f87b05a2e594d2ffee}{price\_}};}
+\DoxyCodeLine{00051\ \};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classvar_1_1Position}{Position}}\ \{}
+\DoxyCodeLine{00060\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00061\ \ \ \ \ }
+\DoxyCodeLine{00068\ \ \ \ \ \mbox{\hyperlink{classvar_1_1Position_a20f2de4d6f5bc39fd3f2e4eb7d13709c}{Position}}(std::shared\_ptr<Instrument>\ instrument,\ \textcolor{keywordtype}{double}\ quantity)}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classvar_1_1Position_a952fbdc6526defbde60b32e6aa1d299c}{instrument\_}}(std::move(instrument)),\ \mbox{\hyperlink{classvar_1_1Position_aa057dff67407f80804a91058f4b1ec66}{quantity\_}}(quantity)\ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{classvar_1_1Position_a952fbdc6526defbde60b32e6aa1d299c}{instrument\_}})\ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Instrument\ cannot\ be\ null"{}});}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00074\ \ \ \ \ \}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classvar_1_1Position_abde2bd45d526f77f675c8dc2cddb06a1}{getQuantity}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classvar_1_1Position_aa057dff67407f80804a91058f4b1ec66}{quantity\_}};\ \}}
+\DoxyCodeLine{00078\ \ \ \ \ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classvar_1_1Position_adb7f1ae1661f56c2df659ea48f5a4ab8}{getValue}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classvar_1_1Position_a952fbdc6526defbde60b32e6aa1d299c}{instrument\_}}-\/>getPrice()\ *\ \mbox{\hyperlink{classvar_1_1Position_aa057dff67407f80804a91058f4b1ec66}{quantity\_}};}
+\DoxyCodeLine{00085\ \ \ \ \ \}}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00088\ \ \ \ \ std::shared\_ptr<Instrument>\ \mbox{\hyperlink{classvar_1_1Position_a05c1b2709ee2d8ac2efa7fc55a33ac26}{getInstrument}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classvar_1_1Position_a952fbdc6526defbde60b32e6aa1d299c}{instrument\_}};}
+\DoxyCodeLine{00090\ \ \ \ \ \}}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00093\ \ \ \ \ std::shared\_ptr<Instrument>\ \mbox{\hyperlink{classvar_1_1Position_a952fbdc6526defbde60b32e6aa1d299c}{instrument\_}};}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classvar_1_1Position_aa057dff67407f80804a91058f4b1ec66}{quantity\_}};}
+\DoxyCodeLine{00095\ \};}
+\DoxyCodeLine{00096\ \}}
+
+\end{DoxyCode}

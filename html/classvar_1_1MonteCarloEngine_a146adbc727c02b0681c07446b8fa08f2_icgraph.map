@@ -1,0 +1,11 @@
+<map id="var::MonteCarloEngine::simulateBatch" name="var::MonteCarloEngine::simulateBatch">
+<area shape="rect" id="Node000001" title="Внутренний метод для генерации части путей (исполняется в потоке)." alt="" coords="832,5,1003,45"/>
+<area shape="rect" id="Node000002" href="$classvar_1_1MonteCarloEngine.html#a912e5a056771dcb2bce58648e31ecd73" title="Запускает параллельную генерацию путей." alt="" coords="613,5,784,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="818,28,784,28,784,23,818,23"/>
+<area shape="rect" id="Node000003" href="$classvar_1_1MonteCarloVaRCalculator.html#a395e29493af5d757dfe7a45e236aa46a" title="Вычисляет величину риска (VaR) в валюте портфеля." alt="" coords="348,5,565,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="600,28,565,28,565,23,600,23"/>
+<area shape="rect" id="Node000004" href="$classvar_1_1VaREngine.html#afc175c272e1694063426077f219a4e03" title="Запуск полного отчета о рисках." alt="" coords="108,13,300,38"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="334,28,300,28,300,23,334,23"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,13,60,38"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="95,28,60,28,60,23,95,23"/>
+</map>

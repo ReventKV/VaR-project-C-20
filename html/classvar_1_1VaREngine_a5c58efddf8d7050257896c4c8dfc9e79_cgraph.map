@@ -1,0 +1,13 @@
+<map id="var::VaREngine::addAsset" name="var::VaREngine::addAsset">
+<area shape="rect" id="Node000001" title="Добавить актив в анализ." alt="" coords="5,55,193,80"/>
+<area shape="rect" id="Node000002" href="$classvar_1_1Portfolio.html#a791593e1f74413ffb0c62e81731fb715" title="Добавляет позицию в портфель." alt="" coords="241,5,432,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="161,52,261,31,262,36,162,57"/>
+<area shape="rect" id="Node000003" href="$classvar_1_1DataLoader.html#a40a9c581f7ede5e4f6fe99ae5ef97773" title="Загружает данные из файла." alt="" coords="255,55,418,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="193,65,241,65,241,70,193,70"/>
+<area shape="rect" id="Node000006" href="$classvar_1_1TimeSeries.html#a4b80cd22d91b3c9d4aa92cd37bea3123" title="Возвращает количество записей в ряду." alt="" coords="257,104,416,129"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="162,77,262,99,261,104,161,83"/>
+<area shape="rect" id="Node000004" href="$classvar_1_1TimeSeries.html#a581fcdb02d214bc75d8961498f385a10" title="Добавляет новую запись в конец ряда." alt="" coords="498,31,654,56"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="418,57,484,50,485,55,418,62"/>
+<area shape="rect" id="Node000005" href="$classvar_1_1CsvReader.html#a5b547e9ce74dd61d6b7b572da0d0f882" title="Разбирает строку CSV." alt="" coords="480,80,672,105"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="418,73,467,78,466,84,418,79"/>
+</map>

@@ -1,0 +1,28 @@
+\doxysection{Va\+REngine.\+hpp}
+\hypertarget{VaREngine_8hpp_source}{}\label{VaREngine_8hpp_source}\index{VaREngine.hpp@{VaREngine.hpp}}
+\mbox{\hyperlink{VaREngine_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Portfolio_8hpp}{var/Portfolio.hpp}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{TimeSeries_8hpp}{var/TimeSeries.hpp}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacevar}{var}}\ \{}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classvar_1_1VaREngine}{VaREngine}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classvar_1_1VaREngine_a5c58efddf8d7050257896c4c8dfc9e79}{addAsset}}(\textcolor{keyword}{const}\ std::string\&\ ticker,\ \textcolor{keyword}{const}\ std::string\&\ csvPath,\ \textcolor{keywordtype}{double}\ quantity,\ \textcolor{keywordtype}{double}\ currentPrice);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classvar_1_1VaREngine_afc175c272e1694063426077f219a4e03}{runReport}}(\textcolor{keywordtype}{double}\ confidence,\ \textcolor{keywordtype}{int}\ horizonDays,\ \textcolor{keywordtype}{int}\ mcPaths\ =\ 10000);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{classvar_1_1Portfolio}{Portfolio}}\ \mbox{\hyperlink{classvar_1_1VaREngine_a75aa89001dd525dd1e83cb67b30000b6}{portfolio\_}};}
+\DoxyCodeLine{00047\ \ \ \ \ std::map<std::string,\ TimeSeries>\ \mbox{\hyperlink{classvar_1_1VaREngine_a22422e545846f3387c9ea8d36d0da2da}{marketData\_}};}
+\DoxyCodeLine{00048\ \};}
+\DoxyCodeLine{00049\ \}}
+
+\end{DoxyCode}

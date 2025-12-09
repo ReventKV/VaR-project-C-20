@@ -1,0 +1,9 @@
+<map id="var::ParametricVaRCalculator::getNormalQuantile" name="var::ParametricVaRCalculator::getNormalQuantile">
+<area shape="rect" id="Node000001" title="Возвращает квантиль нормального распределения (Z&#45;score). Например, 1.645 для 95%." alt="" coords="608,5,820,45"/>
+<area shape="rect" id="Node000002" href="$classvar_1_1ParametricVaRCalculator.html#ae89329fc76e92ffce9cb6fccad788134" title="Вычисляет VaR аналитически." alt="" coords="348,5,560,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="595,28,560,28,560,23,595,23"/>
+<area shape="rect" id="Node000003" href="$classvar_1_1VaREngine.html#afc175c272e1694063426077f219a4e03" title="Запуск полного отчета о рисках." alt="" coords="108,13,300,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="334,28,300,28,300,23,334,23"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,13,60,38"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="95,28,60,28,60,23,95,23"/>
+</map>

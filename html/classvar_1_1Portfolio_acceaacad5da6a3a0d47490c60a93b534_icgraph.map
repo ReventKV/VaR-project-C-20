@@ -1,0 +1,15 @@
+<map id="var::Portfolio::getPositions" name="var::Portfolio::getPositions">
+<area shape="rect" id="Node000001" title="Предоставляет доступ к списку позиций (только для чтения). Необходим калькуляторам риска для итерации..." alt="" coords="613,106,808,131"/>
+<area shape="rect" id="Node000002" href="$classvar_1_1HistoricalVaRCalculator.html#a4106672e0e1166885d9b347fc4991337" title="Вычисляет VaR." alt="" coords="355,5,559,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="669,103,564,60,529,48,530,43,566,55,671,98"/>
+<area shape="rect" id="Node000003" href="$classvar_1_1MonteCarloVaRCalculator.html#a395e29493af5d757dfe7a45e236aa46a" title="Вычисляет величину риска (VaR) в валюте портфеля." alt="" coords="348,69,565,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="600,109,565,105,566,99,600,103"/>
+<area shape="rect" id="Node000004" href="$classvar_1_1VaREngine.html#afc175c272e1694063426077f219a4e03" title="Запуск полного отчета о рисках." alt="" coords="108,134,300,159"/>
+<area shape="poly" id="edge7_Node000001_Node000004" title=" " alt="" coords="599,127,300,144,300,139,599,122"/>
+<area shape="rect" id="Node000006" href="$classvar_1_1ParametricVaRCalculator.html#ae89329fc76e92ffce9cb6fccad788134" title="Вычисляет VaR аналитически." alt="" coords="351,184,563,224"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="660,138,518,187,516,181,658,133"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="355,115,261,137,260,131,354,110"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,134,60,159"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="95,149,60,149,60,144,95,144"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="354,184,260,162,261,157,355,178"/>
+</map>

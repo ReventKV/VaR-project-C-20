@@ -1,0 +1,23 @@
+<map id="var::MonteCarloVaRCalculator::calculateVaR" name="var::MonteCarloVaRCalculator::calculateVaR">
+<area shape="rect" id="Node000001" title="Вычисляет величину риска (VaR) в валюте портфеля." alt="" coords="5,163,223,203"/>
+<area shape="rect" id="Node000002" href="$classvar_1_1MCStatistics.html#ab17d908a63b6f71871ad181f901a47dd" title="Добавить результат одного прогона (сценария)." alt="" coords="329,5,469,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="133,161,190,108,228,79,270,55,315,38,317,43,272,60,231,84,194,112,136,164"/>
+<area shape="rect" id="Node000003" href="$classvar_1_1RiskModel.html#a23b787f2464e5a18c8248610af5740d1" title="Вычисляет ковариационную матрицу доходностей." alt="" coords="271,69,528,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="161,160,270,119,298,110,300,115,272,124,163,165"/>
+<area shape="rect" id="Node000007" href="$classvar_1_1MCStatistics.html#a05f33ce6374d456a2b206edbd0cf7f7c" title="Вычисляет VaR на основе распределения убытков." alt="" coords="329,133,469,173"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="223,169,315,159,316,165,223,174"/>
+<area shape="rect" id="Node000008" href="$classvar_1_1Portfolio.html#acceaacad5da6a3a0d47490c60a93b534" title="Предоставляет доступ к списку позиций (только для чтения). Необходим калькуляторам риска для итерации..." alt="" coords="302,198,497,223"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="223,191,288,197,288,202,223,196"/>
+<area shape="rect" id="Node000009" href="$classvar_1_1Portfolio.html#a6e1d29882e53d52821ce71c21ce66ff5" title="Считает полную стоимость портфеля (Net Asset Value). Суммирует стоимость всех входящих позиций по тек..." alt="" coords="316,248,483,288"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="173,200,271,232,306,242,304,247,270,237,171,205"/>
+<area shape="rect" id="Node000010" href="$classvar_1_1MonteCarloEngine.html#a912e5a056771dcb2bce58648e31ecd73" title="Запускает параллельную генерацию путей." alt="" coords="314,312,485,352"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="138,201,196,250,233,275,272,298,302,310,300,314,270,302,230,280,192,254,134,205"/>
+<area shape="rect" id="Node000004" href="$classvar_1_1RiskModel.html#a2276a3a3244bd51ccdb102940ed1b1de" title="Выравнивает временные ряды по единой шкале дат." alt="" coords="576,37,768,77"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="528,72,562,68,563,73,528,77"/>
+<area shape="rect" id="Node000005" href="$classvar_1_1ReturnCalculator.html#a4eb63d575da0606f0e579b626502b6ef" title="Вычисляет логарифмические доходности." alt="" coords="592,101,752,141"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="528,102,579,108,578,113,528,107"/>
+<area shape="rect" id="Node000006" href="$classvar_1_1TimeSeries.html#ac8bab0de4eab6515b77b8548f1a5ab48" title="Возвращает ссылку на внутренний вектор записей." alt="" coords="816,109,1021,134"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="752,119,802,119,802,124,752,124"/>
+<area shape="rect" id="Node000011" href="$classvar_1_1MonteCarloEngine.html#a146adbc727c02b0681c07446b8fa08f2" title="Внутренний метод для генерации части путей (исполняется в потоке)." alt="" coords="587,312,757,352"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="485,329,573,329,573,335,485,335"/>
+</map>

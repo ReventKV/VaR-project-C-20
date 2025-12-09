@@ -1,0 +1,26 @@
+\doxysection{Historical\+Va\+RCalculator.\+hpp}
+\hypertarget{HistoricalVaRCalculator_8hpp_source}{}\label{HistoricalVaRCalculator_8hpp_source}\index{HistoricalVaRCalculator.hpp@{HistoricalVaRCalculator.hpp}}
+\mbox{\hyperlink{HistoricalVaRCalculator_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{VaRCalculator_8hpp}{var/VaRCalculator.hpp}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{TimeSeries_8hpp}{var/TimeSeries.hpp}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacevar}{var}}\ \{}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classvar_1_1HistoricalVaRCalculator}{HistoricalVaRCalculator}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classvar_1_1VaRCalculator}{VaRCalculator}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{classvar_1_1HistoricalVaRCalculator}{HistoricalVaRCalculator}}(std::map<std::string,\ TimeSeries>\ marketData);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classvar_1_1HistoricalVaRCalculator_a4106672e0e1166885d9b347fc4991337}{calculateVaR}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classvar_1_1Portfolio}{Portfolio}}\&\ portfolio,\ \textcolor{keywordtype}{double}\ confidence,\ \textcolor{keywordtype}{int}\ horizon)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00032\ \ \ \ \ std::map<std::string,\ TimeSeries>\ \mbox{\hyperlink{classvar_1_1HistoricalVaRCalculator_aae5799869307b5004e802311efb645f6}{marketData\_}};}
+\DoxyCodeLine{00033\ \};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \}}
+
+\end{DoxyCode}

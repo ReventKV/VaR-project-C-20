@@ -1,0 +1,15 @@
+<map id="runUserMode" name="runUserMode">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,55,115,80"/>
+<area shape="rect" id="Node000002" href="$classvar_1_1VaREngine.html#a5c58efddf8d7050257896c4c8dfc9e79" title="Добавить актив в анализ." alt="" coords="163,55,351,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,65,149,65,149,70,115,70"/>
+<area shape="rect" id="Node000003" href="$classvar_1_1Portfolio.html#a791593e1f74413ffb0c62e81731fb715" title="Добавляет позицию в портфель." alt="" coords="399,5,589,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="318,52,418,31,420,36,319,57"/>
+<area shape="rect" id="Node000004" href="$classvar_1_1DataLoader.html#a40a9c581f7ede5e4f6fe99ae5ef97773" title="Загружает данные из файла." alt="" coords="413,55,575,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="351,65,399,65,399,70,351,70"/>
+<area shape="rect" id="Node000007" href="$classvar_1_1TimeSeries.html#a4b80cd22d91b3c9d4aa92cd37bea3123" title="Возвращает количество записей в ряду." alt="" coords="415,104,573,129"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="319,77,420,99,418,104,318,83"/>
+<area shape="rect" id="Node000005" href="$classvar_1_1TimeSeries.html#a581fcdb02d214bc75d8961498f385a10" title="Добавляет новую запись в конец ряда." alt="" coords="655,31,811,56"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="575,57,642,50,642,55,576,62"/>
+<area shape="rect" id="Node000006" href="$classvar_1_1CsvReader.html#a5b547e9ce74dd61d6b7b572da0d0f882" title="Разбирает строку CSV." alt="" coords="637,80,829,105"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="576,73,624,78,623,84,575,79"/>
+</map>

@@ -1,0 +1,16 @@
+<map id="var::RiskModel::alignTimeSeries" name="var::RiskModel::alignTimeSeries">
+<area shape="rect" id="Node000001" title="Выравнивает временные ряды по единой шкале дат." alt="" coords="919,37,1111,77"/>
+<area shape="rect" id="Node000002" href="$classvar_1_1HistoricalVaRCalculator.html#a4106672e0e1166885d9b347fc4991337" title="Вычисляет VaR." alt="" coords="640,5,844,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="905,47,844,40,845,35,905,42"/>
+<area shape="rect" id="Node000003" href="$classvar_1_1RiskModel.html#a23b787f2464e5a18c8248610af5740d1" title="Вычисляет ковариационную матрицу доходностей." alt="" coords="613,69,871,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="905,73,871,77,871,72,905,68"/>
+<area shape="rect" id="Node000004" href="$classvar_1_1MonteCarloVaRCalculator.html#a395e29493af5d757dfe7a45e236aa46a" title="Вычисляет величину риска (VaR) в валюте портфеля." alt="" coords="348,37,565,77"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="599,76,565,72,566,67,600,71"/>
+<area shape="rect" id="Node000007" href="$classvar_1_1ParametricVaRCalculator.html#ae89329fc76e92ffce9cb6fccad788134" title="Вычисляет VaR аналитически." alt="" coords="351,101,563,141"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="600,108,563,112,562,107,599,103"/>
+<area shape="rect" id="Node000005" href="$classvar_1_1VaREngine.html#afc175c272e1694063426077f219a4e03" title="Запуск полного отчета о рисках." alt="" coords="108,77,300,102"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="335,75,300,80,300,75,334,70"/>
+<area shape="rect" id="Node000006" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,77,60,102"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="95,92,60,92,60,87,95,87"/>
+<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="337,109,300,104,300,99,337,104"/>
+</map>

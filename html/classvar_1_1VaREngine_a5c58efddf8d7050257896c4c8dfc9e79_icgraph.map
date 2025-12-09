@@ -1,0 +1,10 @@
+<map id="var::VaREngine::addAsset" name="var::VaREngine::addAsset">
+<area shape="rect" id="Node000001" title="Добавить актив в анализ." alt="" coords="275,31,463,56"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#a373f50dd0acc2242b860b01d40f649ed" title=" " alt="" coords="108,5,227,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="261,32,227,28,227,23,261,27"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#ac16e2ad4707b661903695efc048f865e" title=" " alt="" coords="113,55,222,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="261,59,223,63,222,58,261,54"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,31,60,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="95,34,61,41,60,36,94,29"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="99,58,60,51,61,45,100,53"/>
+</map>

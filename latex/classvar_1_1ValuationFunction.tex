@@ -1,0 +1,79 @@
+\doxysection{var\+::Valuation\+Function Class Reference}
+\hypertarget{classvar_1_1ValuationFunction}{}\label{classvar_1_1ValuationFunction}\index{var::ValuationFunction@{var::ValuationFunction}}
+
+
+Абстрактная функция оценки стоимости (Valuation).  
+
+
+
+
+{\ttfamily \#include $<$Valuation\+Function.\+hpp$>$}
+
+
+
+Inheritance diagram for var\+::Valuation\+Function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{classvar_1_1ValuationFunction__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for var\+::Valuation\+Function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{classvar_1_1ValuationFunction__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classvar_1_1ValuationFunction_adba247a29f7661d590f4316b64456585}{\texorpdfstring{$\sim$}{\string~}\+Valuation\+Function}} ()=default
+\item 
+virtual double \mbox{\hyperlink{classvar_1_1ValuationFunction_ac3d2d8af3c815e23323ee24aadf82dd5}{value}} (const \mbox{\hyperlink{namespacevar_acc465a5d165b0ae17c8fd2211b6c949d}{Scenario}} \&scenario) const =0
+\begin{DoxyCompactList}\small\item\em Возвращает новую стоимость позиции в сценарии. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Абстрактная функция оценки стоимости (Valuation). 
+
+Паттерн "{}\+Strategy"{}. Определяет, как изменится стоимость конкретной позиции при заданном рыночном сценарии. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classvar_1_1ValuationFunction_adba247a29f7661d590f4316b64456585}\label{classvar_1_1ValuationFunction_adba247a29f7661d590f4316b64456585} 
+\index{var::ValuationFunction@{var::ValuationFunction}!````~ValuationFunction@{\texorpdfstring{$\sim$}{\string~}ValuationFunction}}
+\index{````~ValuationFunction@{\texorpdfstring{$\sim$}{\string~}ValuationFunction}!var::ValuationFunction@{var::ValuationFunction}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ValuationFunction()}{\string~ValuationFunction()}}
+{\footnotesize\ttfamily virtual var\+::\+Valuation\+Function\+::\texorpdfstring{$\sim$}{\string~}\+Valuation\+Function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classvar_1_1ValuationFunction_ac3d2d8af3c815e23323ee24aadf82dd5}\label{classvar_1_1ValuationFunction_ac3d2d8af3c815e23323ee24aadf82dd5} 
+\index{var::ValuationFunction@{var::ValuationFunction}!value@{value}}
+\index{value@{value}!var::ValuationFunction@{var::ValuationFunction}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}}
+{\footnotesize\ttfamily virtual double var\+::\+Valuation\+Function\+::value (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacevar_acc465a5d165b0ae17c8fd2211b6c949d}{Scenario}} \&}]{scenario }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Возвращает новую стоимость позиции в сценарии. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scenario} & Вектор доходностей рынка. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classvar_1_1StockValuation_a939d589a5b33938217b3093d1c190adc}{var\+::\+Stock\+Valuation}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ValuationFunction_8hpp}{Valuation\+Function.\+hpp}}\end{DoxyCompactItemize}

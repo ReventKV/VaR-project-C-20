@@ -1,0 +1,9 @@
+<map id="var::RiskModel::computeCovarianceMatrix" name="var::RiskModel::computeCovarianceMatrix">
+<area shape="rect" id="Node000001" title="Вычисляет ковариационную матрицу доходностей." alt="" coords="5,37,263,77"/>
+<area shape="rect" id="Node000002" href="$classvar_1_1RiskModel.html#a2276a3a3244bd51ccdb102940ed1b1de" title="Выравнивает временные ряды по единой шкале дат." alt="" coords="311,5,503,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="263,40,297,36,297,41,263,45"/>
+<area shape="rect" id="Node000003" href="$classvar_1_1ReturnCalculator.html#a4eb63d575da0606f0e579b626502b6ef" title="Вычисляет логарифмические доходности." alt="" coords="327,69,487,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="263,70,313,76,313,81,263,75"/>
+<area shape="rect" id="Node000004" href="$classvar_1_1TimeSeries.html#ac8bab0de4eab6515b77b8548f1a5ab48" title="Возвращает ссылку на внутренний вектор записей." alt="" coords="551,77,756,102"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="487,87,537,87,537,92,487,92"/>
+</map>

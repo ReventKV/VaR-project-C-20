@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/var_app.dir/main.cpp.o -o var_app  libvar_core.a 

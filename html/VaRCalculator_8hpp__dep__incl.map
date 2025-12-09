@@ -1,0 +1,19 @@
+<map id="VaRCalculator.hpp" name="VaRCalculator.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="339,5,479,31"/>
+<area shape="rect" id="Node000002" href="$HistoricalVaRCalculator_8hpp.html" title=" " alt="" coords="74,79,277,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="359,37,214,81,212,76,358,32"/>
+<area shape="rect" id="Node000005" href="$MonteCarloVaRCalculator_8hpp.html" title=" " alt="" coords="301,79,516,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="411,44,411,79,406,79,406,44"/>
+<area shape="rect" id="Node000007" href="$ParametricVaRCalculator_8hpp.html" title=" " alt="" coords="541,79,751,104"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="461,32,608,76,607,81,459,37"/>
+<area shape="rect" id="Node000003" href="$HistoricalVaRCalculator_8cpp.html" title=" " alt="" coords="5,152,207,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="156,116,119,154,115,150,153,112"/>
+<area shape="rect" id="Node000004" href="$VaREngine_8cpp.html" title=" " alt="" coords="231,152,349,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="207,109,273,150,270,154,204,113"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="379,113,311,154,308,149,376,109"/>
+<area shape="rect" id="Node000006" href="$MonteCarloVaRCalculator_8cpp.html" title=" " alt="" coords="373,152,588,177"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="432,112,471,150,467,154,429,116"/>
+<area shape="poly" id="edge9_Node000007_Node000004" title=" " alt="" coords="576,109,348,155,347,149,575,104"/>
+<area shape="rect" id="Node000008" href="$ParametricVaRCalculator_8cpp.html" title=" " alt="" coords="612,152,821,177"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="669,112,707,150,703,154,665,116"/>
+</map>

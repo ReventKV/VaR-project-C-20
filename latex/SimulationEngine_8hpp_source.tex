@@ -1,0 +1,42 @@
+\doxysection{Simulation\+Engine.\+hpp}
+\hypertarget{SimulationEngine_8hpp_source}{}\label{SimulationEngine_8hpp_source}\index{SimulationEngine.hpp@{SimulationEngine.hpp}}
+\mbox{\hyperlink{SimulationEngine_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <Eigen/Dense>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <random>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacevar}{var}}\ \{}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacevar_acc465a5d165b0ae17c8fd2211b6c949d}{Scenario}}\ =\ std::vector<double>;}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classvar_1_1SimulationEngine}{SimulationEngine}}\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classvar_1_1SimulationEngine_a58209e7d21f57079d86ed902ecaf8d31}{\string~SimulationEngine}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00018\ \ \ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{virtual}\ std::vector<Scenario>\ \mbox{\hyperlink{classvar_1_1SimulationEngine_a04ac5b8b7d19f191cff545deb6e9b6fe}{simulate}}(\textcolor{keywordtype}{int}\ nPaths,\ \textcolor{keywordtype}{int}\ horizonDays)\ =\ 0;}
+\DoxyCodeLine{00026\ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classvar_1_1MonteCarloEngine}{MonteCarloEngine}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classvar_1_1SimulationEngine}{SimulationEngine}}\ \{}
+\DoxyCodeLine{00035\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{classvar_1_1MonteCarloEngine}{MonteCarloEngine}}(\textcolor{keyword}{const}\ Eigen::MatrixXd\&\ covMatrix,\ \textcolor{keywordtype}{double}\ riskFreeRate\ =\ 0.0,\ uint32\_t\ seed\ =\ 42);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00051\ \ \ \ \ std::vector<Scenario>\ \mbox{\hyperlink{classvar_1_1MonteCarloEngine_a912e5a056771dcb2bce58648e31ecd73}{simulate}}(\textcolor{keywordtype}{int}\ nPaths,\ \textcolor{keywordtype}{int}\ horizonDays)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00059\ \ \ \ \ std::vector<Scenario>\ \mbox{\hyperlink{classvar_1_1MonteCarloEngine_a146adbc727c02b0681c07446b8fa08f2}{simulateBatch}}(\textcolor{keywordtype}{int}\ nPaths,\ \textcolor{keywordtype}{int}\ horizonDays,\ uint32\_t\ batchSeed);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ Eigen::MatrixXd\ \mbox{\hyperlink{classvar_1_1MonteCarloEngine_a90b3738e44bd372d4eac573062898339}{covMatrix\_}};}
+\DoxyCodeLine{00062\ \ \ \ \ Eigen::MatrixXd\ \mbox{\hyperlink{classvar_1_1MonteCarloEngine_a8b6f4f81d07fbe849b7b774443944a23}{choleskyL\_}};\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classvar_1_1MonteCarloEngine_ae722f6e2815121f46b819b44668ab4d2}{riskFreeRate\_}};}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classvar_1_1MonteCarloEngine_a9de7a5a0a2581b9f7cd0d0250f17fd47}{numAssets\_}};}
+\DoxyCodeLine{00065\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{classvar_1_1MonteCarloEngine_a2483f84b8f010076a7df868e2da995f8}{seed\_}};}
+\DoxyCodeLine{00066\ \};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \}}
+
+\end{DoxyCode}

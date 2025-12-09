@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/var_tests.dir/test_main.cpp.o CMakeFiles/var_tests.dir/test_DataLoader.cpp.o CMakeFiles/var_tests.dir/test_RiskModel.cpp.o CMakeFiles/var_tests.dir/test_Portfolio.cpp.o CMakeFiles/var_tests.dir/test_VaR.cpp.o CMakeFiles/var_tests.dir/test_MonteCarlo.cpp.o -o var_tests  ../src/libvar_core.a ../lib/libgtest_main.a ../lib/libgtest.a 

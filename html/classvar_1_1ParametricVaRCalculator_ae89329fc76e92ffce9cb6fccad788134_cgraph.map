@@ -1,0 +1,17 @@
+<map id="var::ParametricVaRCalculator::calculateVaR" name="var::ParametricVaRCalculator::calculateVaR">
+<area shape="rect" id="Node000001" title="Вычисляет VaR аналитически." alt="" coords="5,131,217,171"/>
+<area shape="rect" id="Node000002" href="$classvar_1_1RiskModel.html#a23b787f2464e5a18c8248610af5740d1" title="Вычисляет ковариационную матрицу доходностей." alt="" coords="265,37,523,77"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="157,128,264,87,293,78,294,83,266,92,159,133"/>
+<area shape="rect" id="Node000006" href="$classvar_1_1ParametricVaRCalculator.html#a7eb02c5f3e93983abf102fcaaacbcde1" title="Возвращает квантиль нормального распределения (Z&#45;score). Например, 1.645 для 95%." alt="" coords="288,101,500,141"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="217,137,274,131,275,136,218,142"/>
+<area shape="rect" id="Node000007" href="$classvar_1_1Portfolio.html#acceaacad5da6a3a0d47490c60a93b534" title="Предоставляет доступ к списку позиций (только для чтения). Необходим калькуляторам риска для итерации..." alt="" coords="297,166,491,191"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="218,159,283,165,282,170,217,164"/>
+<area shape="rect" id="Node000008" href="$classvar_1_1Portfolio.html#a6e1d29882e53d52821ce71c21ce66ff5" title="Считает полную стоимость портфеля (Net Asset Value). Суммирует стоимость всех входящих позиций по тек..." alt="" coords="311,216,477,256"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="167,168,266,201,298,210,297,216,265,207,165,173"/>
+<area shape="rect" id="Node000003" href="$classvar_1_1RiskModel.html#a2276a3a3244bd51ccdb102940ed1b1de" title="Выравнивает временные ряды по единой шкале дат." alt="" coords="571,5,763,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="523,40,557,36,557,41,523,45"/>
+<area shape="rect" id="Node000004" href="$classvar_1_1ReturnCalculator.html#a4eb63d575da0606f0e579b626502b6ef" title="Вычисляет логарифмические доходности." alt="" coords="587,69,747,109"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="523,70,573,76,573,81,523,75"/>
+<area shape="rect" id="Node000005" href="$classvar_1_1TimeSeries.html#ac8bab0de4eab6515b77b8548f1a5ab48" title="Возвращает ссылку на внутренний вектор записей." alt="" coords="811,77,1016,102"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="747,87,797,87,797,92,747,92"/>
+</map>

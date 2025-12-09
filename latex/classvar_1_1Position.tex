@@ -1,0 +1,122 @@
+\doxysection{var\+::Position Class Reference}
+\hypertarget{classvar_1_1Position}{}\label{classvar_1_1Position}\index{var::Position@{var::Position}}
+
+
+Позиция в портфеле.  
+
+
+
+
+{\ttfamily \#include $<$Instrument.\+hpp$>$}
+
+
+
+Collaboration diagram for var\+::Position\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{classvar_1_1Position__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classvar_1_1Position_a20f2de4d6f5bc39fd3f2e4eb7d13709c}{Position}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classvar_1_1Instrument}{Instrument}} $>$ instrument, double quantity)
+\begin{DoxyCompactList}\small\item\em Создает позицию. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classvar_1_1Position_abde2bd45d526f77f675c8dc2cddb06a1}{get\+Quantity}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает количество. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classvar_1_1Position_adb7f1ae1661f56c2df659ea48f5a4ab8}{get\+Value}} () const
+\begin{DoxyCompactList}\small\item\em Вычисляет текущую стоимость позиции. Formula\+: Market\+Price \texorpdfstring{$\ast$}{*} Quantity. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classvar_1_1Instrument}{Instrument}} $>$ \mbox{\hyperlink{classvar_1_1Position_a05c1b2709ee2d8ac2efa7fc55a33ac26}{get\+Instrument}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает указатель на инструмент. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classvar_1_1Instrument}{Instrument}} $>$ \mbox{\hyperlink{classvar_1_1Position_a952fbdc6526defbde60b32e6aa1d299c}{instrument\+\_\+}}
+\item 
+double \mbox{\hyperlink{classvar_1_1Position_aa057dff67407f80804a91058f4b1ec66}{quantity\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Позиция в портфеле. 
+
+Связывает инструмент и объем владения (количество). Использует shared\+\_\+ptr для связи с инструментом. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classvar_1_1Position_a20f2de4d6f5bc39fd3f2e4eb7d13709c}\label{classvar_1_1Position_a20f2de4d6f5bc39fd3f2e4eb7d13709c} 
+\index{var::Position@{var::Position}!Position@{Position}}
+\index{Position@{Position}!var::Position@{var::Position}}
+\doxysubsubsection{\texorpdfstring{Position()}{Position()}}
+{\footnotesize\ttfamily var\+::\+Position\+::\+Position (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classvar_1_1Instrument}{Instrument}} $>$}]{instrument,  }\item[{double}]{quantity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Создает позицию. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em instrument} & Умный указатель на инструмент (не может быть nullptr). \\
+\hline
+{\em quantity} & Количество единиц (лотов). Может быть дробным. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Если instrument == nullptr. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classvar_1_1Position_a05c1b2709ee2d8ac2efa7fc55a33ac26}\label{classvar_1_1Position_a05c1b2709ee2d8ac2efa7fc55a33ac26} 
+\index{var::Position@{var::Position}!getInstrument@{getInstrument}}
+\index{getInstrument@{getInstrument}!var::Position@{var::Position}}
+\doxysubsubsection{\texorpdfstring{getInstrument()}{getInstrument()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classvar_1_1Instrument}{Instrument}} $>$ var\+::\+Position\+::get\+Instrument (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Возвращает указатель на инструмент. 
+
+\Hypertarget{classvar_1_1Position_abde2bd45d526f77f675c8dc2cddb06a1}\label{classvar_1_1Position_abde2bd45d526f77f675c8dc2cddb06a1} 
+\index{var::Position@{var::Position}!getQuantity@{getQuantity}}
+\index{getQuantity@{getQuantity}!var::Position@{var::Position}}
+\doxysubsubsection{\texorpdfstring{getQuantity()}{getQuantity()}}
+{\footnotesize\ttfamily double var\+::\+Position\+::get\+Quantity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Возвращает количество. 
+
+\Hypertarget{classvar_1_1Position_adb7f1ae1661f56c2df659ea48f5a4ab8}\label{classvar_1_1Position_adb7f1ae1661f56c2df659ea48f5a4ab8} 
+\index{var::Position@{var::Position}!getValue@{getValue}}
+\index{getValue@{getValue}!var::Position@{var::Position}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily double var\+::\+Position\+::get\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Вычисляет текущую стоимость позиции. Formula\+: Market\+Price \texorpdfstring{$\ast$}{*} Quantity. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classvar_1_1Position_a952fbdc6526defbde60b32e6aa1d299c}\label{classvar_1_1Position_a952fbdc6526defbde60b32e6aa1d299c} 
+\index{var::Position@{var::Position}!instrument\_@{instrument\_}}
+\index{instrument\_@{instrument\_}!var::Position@{var::Position}}
+\doxysubsubsection{\texorpdfstring{instrument\_}{instrument\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classvar_1_1Instrument}{Instrument}}$>$ var\+::\+Position\+::instrument\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classvar_1_1Position_aa057dff67407f80804a91058f4b1ec66}\label{classvar_1_1Position_aa057dff67407f80804a91058f4b1ec66} 
+\index{var::Position@{var::Position}!quantity\_@{quantity\_}}
+\index{quantity\_@{quantity\_}!var::Position@{var::Position}}
+\doxysubsubsection{\texorpdfstring{quantity\_}{quantity\_}}
+{\footnotesize\ttfamily double var\+::\+Position\+::quantity\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Instrument_8hpp}{Instrument.\+hpp}}\end{DoxyCompactItemize}

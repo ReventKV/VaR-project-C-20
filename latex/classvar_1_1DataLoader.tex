@@ -1,0 +1,110 @@
+\doxysection{var\+::Data\+Loader Class Reference}
+\hypertarget{classvar_1_1DataLoader}{}\label{classvar_1_1DataLoader}\index{var::DataLoader@{var::DataLoader}}
+
+
+Загрузчик исторических данных из файлов.  
+
+
+
+
+{\ttfamily \#include $<$Data\+Loader.\+hpp$>$}
+
+
+
+Collaboration diagram for var\+::Data\+Loader\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{classvar_1_1DataLoader__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classvar_1_1DataLoader_a4b6e5e5c646170c024e129b549184b40}{Data\+Loader}} (const std\+::string \&file\+Path)
+\begin{DoxyCompactList}\small\item\em Конструктор. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classvar_1_1TimeSeries}{Time\+Series}} \mbox{\hyperlink{classvar_1_1DataLoader_a40a9c581f7ede5e4f6fe99ae5ef97773}{load}} ()
+\begin{DoxyCompactList}\small\item\em Загружает данные из файла. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classvar_1_1DataLoader_a0336b9412475d6296be8bcd3acd18cb2}{file\+Path\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Загрузчик исторических данных из файлов. 
+
+Фасад для чтения файлов. Открывает файл, использует \doxylink{classvar_1_1CsvReader}{Csv\+Reader} для парсинга и формирует объект \doxylink{classvar_1_1TimeSeries}{Time\+Series}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classvar_1_1DataLoader_a4b6e5e5c646170c024e129b549184b40}\label{classvar_1_1DataLoader_a4b6e5e5c646170c024e129b549184b40} 
+\index{var::DataLoader@{var::DataLoader}!DataLoader@{DataLoader}}
+\index{DataLoader@{DataLoader}!var::DataLoader@{var::DataLoader}}
+\doxysubsubsection{\texorpdfstring{DataLoader()}{DataLoader()}}
+{\footnotesize\ttfamily var\+::\+Data\+Loader\+::\+Data\+Loader (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Конструктор. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & Полный или относительный путь к CSV файлу. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classvar_1_1DataLoader_a40a9c581f7ede5e4f6fe99ae5ef97773}\label{classvar_1_1DataLoader_a40a9c581f7ede5e4f6fe99ae5ef97773} 
+\index{var::DataLoader@{var::DataLoader}!load@{load}}
+\index{load@{load}!var::DataLoader@{var::DataLoader}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classvar_1_1TimeSeries}{Time\+Series}} var\+::\+Data\+Loader\+::load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Загружает данные из файла. 
+
+Метод ожидает, что 1-\/я колонка -\/ это Дата, а 2-\/я -\/ Цена. Ошибочные строки пропускаются.
+
+\begin{DoxyReturn}{Returns}
+Заполненный объект \doxylink{classvar_1_1TimeSeries}{Time\+Series}. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & Если файл не удалось открыть. \\
+\hline
+\end{DoxyExceptions}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvar_1_1DataLoader_a40a9c581f7ede5e4f6fe99ae5ef97773_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvar_1_1DataLoader_a40a9c581f7ede5e4f6fe99ae5ef97773_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classvar_1_1DataLoader_a0336b9412475d6296be8bcd3acd18cb2}\label{classvar_1_1DataLoader_a0336b9412475d6296be8bcd3acd18cb2} 
+\index{var::DataLoader@{var::DataLoader}!filePath\_@{filePath\_}}
+\index{filePath\_@{filePath\_}!var::DataLoader@{var::DataLoader}}
+\doxysubsubsection{\texorpdfstring{filePath\_}{filePath\_}}
+{\footnotesize\ttfamily std\+::string var\+::\+Data\+Loader\+::file\+Path\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{DataLoader_8hpp}{Data\+Loader.\+hpp}}\item 
+\mbox{\hyperlink{DataLoader_8cpp}{Data\+Loader.\+cpp}}\end{DoxyCompactItemize}

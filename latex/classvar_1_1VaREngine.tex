@@ -1,0 +1,140 @@
+\doxysection{var\+::Va\+REngine Class Reference}
+\hypertarget{classvar_1_1VaREngine}{}\label{classvar_1_1VaREngine}\index{var::VaREngine@{var::VaREngine}}
+
+
+Главный фасад (Orchestrator) библиотеки.  
+
+
+
+
+{\ttfamily \#include $<$Va\+REngine.\+hpp$>$}
+
+
+
+Collaboration diagram for var\+::Va\+REngine\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{classvar_1_1VaREngine__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classvar_1_1VaREngine_a5c58efddf8d7050257896c4c8dfc9e79}{add\+Asset}} (const std\+::string \&ticker, const std\+::string \&csv\+Path, double quantity, double current\+Price)
+\begin{DoxyCompactList}\small\item\em Добавить актив в анализ. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvar_1_1VaREngine_afc175c272e1694063426077f219a4e03}{run\+Report}} (double confidence, int horizon\+Days, int mc\+Paths=10000)
+\begin{DoxyCompactList}\small\item\em Запуск полного отчета о рисках. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classvar_1_1Portfolio}{Portfolio}} \mbox{\hyperlink{classvar_1_1VaREngine_a75aa89001dd525dd1e83cb67b30000b6}{portfolio\+\_\+}}
+\item 
+std\+::map$<$ std\+::string, \mbox{\hyperlink{classvar_1_1TimeSeries}{Time\+Series}} $>$ \mbox{\hyperlink{classvar_1_1VaREngine_a22422e545846f3387c9ea8d36d0da2da}{market\+Data\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Главный фасад (Orchestrator) библиотеки. 
+
+Предоставляет высокоуровневый API для управления портфелем и запуска расчетов. Скрывает сложность инициализации отдельных калькуляторов. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classvar_1_1VaREngine_a5c58efddf8d7050257896c4c8dfc9e79}\label{classvar_1_1VaREngine_a5c58efddf8d7050257896c4c8dfc9e79} 
+\index{var::VaREngine@{var::VaREngine}!addAsset@{addAsset}}
+\index{addAsset@{addAsset}!var::VaREngine@{var::VaREngine}}
+\doxysubsubsection{\texorpdfstring{addAsset()}{addAsset()}}
+{\footnotesize\ttfamily void var\+::\+Va\+REngine\+::add\+Asset (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ticker,  }\item[{const std\+::string \&}]{csv\+Path,  }\item[{double}]{quantity,  }\item[{double}]{current\+Price }\end{DoxyParamCaption})}
+
+
+
+Добавить актив в анализ. 
+
+Читает CSV, создает инструмент и добавляет позицию. Выводит лог загрузки в консоль.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ticker} & Тикер актива. \\
+\hline
+{\em csv\+Path} & Путь к файлу данных. \\
+\hline
+{\em quantity} & Количество. \\
+\hline
+{\em current\+Price} & Текущая цена. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvar_1_1VaREngine_a5c58efddf8d7050257896c4c8dfc9e79_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvar_1_1VaREngine_a5c58efddf8d7050257896c4c8dfc9e79_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classvar_1_1VaREngine_afc175c272e1694063426077f219a4e03}\label{classvar_1_1VaREngine_afc175c272e1694063426077f219a4e03} 
+\index{var::VaREngine@{var::VaREngine}!runReport@{runReport}}
+\index{runReport@{runReport}!var::VaREngine@{var::VaREngine}}
+\doxysubsubsection{\texorpdfstring{runReport()}{runReport()}}
+{\footnotesize\ttfamily void var\+::\+Va\+REngine\+::run\+Report (\begin{DoxyParamCaption}\item[{double}]{confidence,  }\item[{int}]{horizon\+Days,  }\item[{int}]{mc\+Paths = {\ttfamily 10000} }\end{DoxyParamCaption})}
+
+
+
+Запуск полного отчета о рисках. 
+
+Последовательно запускает Parametric, Historical и Monte Carlo калькуляторы и выводит сравнительную таблицу результатов в stdout.
+
+
+\begin{DoxyParams}{Parameters}
+{\em confidence} & Уровень доверия (например, 0.\+95). \\
+\hline
+{\em horizon\+Days} & Горизонт (дней). \\
+\hline
+{\em mc\+Paths} & Число путей Монте-\/Карло (по умолчанию 10000). \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvar_1_1VaREngine_afc175c272e1694063426077f219a4e03_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{classvar_1_1VaREngine_afc175c272e1694063426077f219a4e03_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classvar_1_1VaREngine_a22422e545846f3387c9ea8d36d0da2da}\label{classvar_1_1VaREngine_a22422e545846f3387c9ea8d36d0da2da} 
+\index{var::VaREngine@{var::VaREngine}!marketData\_@{marketData\_}}
+\index{marketData\_@{marketData\_}!var::VaREngine@{var::VaREngine}}
+\doxysubsubsection{\texorpdfstring{marketData\_}{marketData\_}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, \mbox{\hyperlink{classvar_1_1TimeSeries}{Time\+Series}}$>$ var\+::\+Va\+REngine\+::market\+Data\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classvar_1_1VaREngine_a75aa89001dd525dd1e83cb67b30000b6}\label{classvar_1_1VaREngine_a75aa89001dd525dd1e83cb67b30000b6} 
+\index{var::VaREngine@{var::VaREngine}!portfolio\_@{portfolio\_}}
+\index{portfolio\_@{portfolio\_}!var::VaREngine@{var::VaREngine}}
+\doxysubsubsection{\texorpdfstring{portfolio\_}{portfolio\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classvar_1_1Portfolio}{Portfolio}} var\+::\+Va\+REngine\+::portfolio\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{VaREngine_8hpp}{Va\+REngine.\+hpp}}\item 
+\mbox{\hyperlink{VaREngine_8cpp}{Va\+REngine.\+cpp}}\end{DoxyCompactItemize}

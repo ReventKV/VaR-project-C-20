@@ -1,0 +1,5 @@
+<map id="var::ReturnCalculator::computeLogReturns" name="var::ReturnCalculator::computeLogReturns">
+<area shape="rect" id="Node000001" title="Вычисляет логарифмические доходности." alt="" coords="5,5,165,45"/>
+<area shape="rect" id="Node000002" href="$classvar_1_1TimeSeries.html#ac8bab0de4eab6515b77b8548f1a5ab48" title="Возвращает ссылку на внутренний вектор записей." alt="" coords="213,13,419,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,23,200,23,200,28,166,28"/>
+</map>

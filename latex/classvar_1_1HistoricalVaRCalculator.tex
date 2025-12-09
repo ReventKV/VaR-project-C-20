@@ -1,0 +1,108 @@
+\doxysection{var\+::Historical\+Va\+RCalculator Class Reference}
+\hypertarget{classvar_1_1HistoricalVaRCalculator}{}\label{classvar_1_1HistoricalVaRCalculator}\index{var::HistoricalVaRCalculator@{var::HistoricalVaRCalculator}}
+
+
+Калькулятор Исторического VaR (Historical Simulation).  
+
+
+
+
+{\ttfamily \#include $<$Historical\+Va\+RCalculator.\+hpp$>$}
+
+
+
+Inheritance diagram for var\+::Historical\+Va\+RCalculator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classvar_1_1HistoricalVaRCalculator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for var\+::Historical\+Va\+RCalculator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classvar_1_1HistoricalVaRCalculator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classvar_1_1HistoricalVaRCalculator_a3d88fc2e81f67be204c845ab3fab05d9}{Historical\+Va\+RCalculator}} (std\+::map$<$ std\+::string, \mbox{\hyperlink{classvar_1_1TimeSeries}{Time\+Series}} $>$ market\+Data)
+\item 
+double \mbox{\hyperlink{classvar_1_1HistoricalVaRCalculator_a4106672e0e1166885d9b347fc4991337}{calculate\+VaR}} (const \mbox{\hyperlink{classvar_1_1Portfolio}{Portfolio}} \&portfolio, double confidence, int horizon) const override
+\begin{DoxyCompactList}\small\item\em Вычисляет VaR. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classvar_1_1VaRCalculator}{var\+::\+Va\+RCalculator}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classvar_1_1VaRCalculator_a7fc7d6f996a041bef7b95381cad04b3d}{\texorpdfstring{$\sim$}{\string~}\+Va\+RCalculator}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ std\+::string, \mbox{\hyperlink{classvar_1_1TimeSeries}{Time\+Series}} $>$ \mbox{\hyperlink{classvar_1_1HistoricalVaRCalculator_aae5799869307b5004e802311efb645f6}{market\+Data\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Калькулятор Исторического VaR (Historical Simulation). 
+
+Не делает предположений о распределении доходностей. "{}Проигрывает"{} реальные исторические изменения цен на текущем портфеле. Использует алгоритм выравнивания дат (Data Alignment). 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classvar_1_1HistoricalVaRCalculator_a3d88fc2e81f67be204c845ab3fab05d9}\label{classvar_1_1HistoricalVaRCalculator_a3d88fc2e81f67be204c845ab3fab05d9} 
+\index{var::HistoricalVaRCalculator@{var::HistoricalVaRCalculator}!HistoricalVaRCalculator@{HistoricalVaRCalculator}}
+\index{HistoricalVaRCalculator@{HistoricalVaRCalculator}!var::HistoricalVaRCalculator@{var::HistoricalVaRCalculator}}
+\doxysubsubsection{\texorpdfstring{HistoricalVaRCalculator()}{HistoricalVaRCalculator()}}
+{\footnotesize\ttfamily var\+::\+Historical\+Va\+RCalculator\+::\+Historical\+Va\+RCalculator (\begin{DoxyParamCaption}\item[{std\+::map$<$ std\+::string, \mbox{\hyperlink{classvar_1_1TimeSeries}{Time\+Series}} $>$}]{market\+Data }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classvar_1_1HistoricalVaRCalculator_a4106672e0e1166885d9b347fc4991337}\label{classvar_1_1HistoricalVaRCalculator_a4106672e0e1166885d9b347fc4991337} 
+\index{var::HistoricalVaRCalculator@{var::HistoricalVaRCalculator}!calculateVaR@{calculateVaR}}
+\index{calculateVaR@{calculateVaR}!var::HistoricalVaRCalculator@{var::HistoricalVaRCalculator}}
+\doxysubsubsection{\texorpdfstring{calculateVaR()}{calculateVaR()}}
+{\footnotesize\ttfamily double var\+::\+Historical\+Va\+RCalculator\+::calculate\+VaR (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classvar_1_1Portfolio}{Portfolio}} \&}]{portfolio,  }\item[{double}]{confidence,  }\item[{int}]{horizon }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Вычисляет VaR. 
+
+
+\begin{DoxyEnumerate}
+\item Выравнивает ряды данных.
+\item Рассчитывает исторические P\&L для каждого дня в прошлом.
+\item Находит эмпирический квантиль убытков.
+\item Масштабирует результат на горизонт по правилу корня из времени. 
+\end{DoxyEnumerate}
+
+Implements \mbox{\hyperlink{classvar_1_1VaRCalculator_a4a08d218c4b9d43f20c5a50cee554b90}{var\+::\+Va\+RCalculator}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvar_1_1HistoricalVaRCalculator_a4106672e0e1166885d9b347fc4991337_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classvar_1_1HistoricalVaRCalculator_aae5799869307b5004e802311efb645f6}\label{classvar_1_1HistoricalVaRCalculator_aae5799869307b5004e802311efb645f6} 
+\index{var::HistoricalVaRCalculator@{var::HistoricalVaRCalculator}!marketData\_@{marketData\_}}
+\index{marketData\_@{marketData\_}!var::HistoricalVaRCalculator@{var::HistoricalVaRCalculator}}
+\doxysubsubsection{\texorpdfstring{marketData\_}{marketData\_}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, \mbox{\hyperlink{classvar_1_1TimeSeries}{Time\+Series}}$>$ var\+::\+Historical\+Va\+RCalculator\+::market\+Data\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{HistoricalVaRCalculator_8hpp}{Historical\+Va\+RCalculator.\+hpp}}\item 
+\mbox{\hyperlink{HistoricalVaRCalculator_8cpp}{Historical\+Va\+RCalculator.\+cpp}}\end{DoxyCompactItemize}

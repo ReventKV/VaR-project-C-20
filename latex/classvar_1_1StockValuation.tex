@@ -1,0 +1,108 @@
+\doxysection{var\+::Stock\+Valuation Class Reference}
+\hypertarget{classvar_1_1StockValuation}{}\label{classvar_1_1StockValuation}\index{var::StockValuation@{var::StockValuation}}
+
+
+{\ttfamily \#include $<$Valuation\+Function.\+hpp$>$}
+
+
+
+Inheritance diagram for var\+::Stock\+Valuation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{classvar_1_1StockValuation__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for var\+::Stock\+Valuation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{classvar_1_1StockValuation__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classvar_1_1StockValuation_ae3ba0220f9437fa7b030c7ea3589b1db}{Stock\+Valuation}} (double current\+Price, double quantity, size\+\_\+t idx)
+\begin{DoxyCompactList}\small\item\em Оценка для простых акций (Linear/\+Log-\/\+Normal payoff). \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classvar_1_1StockValuation_a939d589a5b33938217b3093d1c190adc}{value}} (const \mbox{\hyperlink{namespacevar_acc465a5d165b0ae17c8fd2211b6c949d}{Scenario}} \&scenario) const override
+\begin{DoxyCompactList}\small\item\em Возвращает новую стоимость позиции в сценарии. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classvar_1_1ValuationFunction}{var\+::\+Valuation\+Function}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classvar_1_1ValuationFunction_adba247a29f7661d590f4316b64456585}{\texorpdfstring{$\sim$}{\string~}\+Valuation\+Function}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classvar_1_1StockValuation_a8fb3e77bb1b392041c57ca51d53151f9}{price\+\_\+}}
+\item 
+double \mbox{\hyperlink{classvar_1_1StockValuation_aef619d8f45b2165a97181490a3c89616}{quantity\+\_\+}}
+\item 
+size\+\_\+t \mbox{\hyperlink{classvar_1_1StockValuation_a7adb43a2103ccaa3414fff95f4715686}{idx\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classvar_1_1StockValuation_ae3ba0220f9437fa7b030c7ea3589b1db}\label{classvar_1_1StockValuation_ae3ba0220f9437fa7b030c7ea3589b1db} 
+\index{var::StockValuation@{var::StockValuation}!StockValuation@{StockValuation}}
+\index{StockValuation@{StockValuation}!var::StockValuation@{var::StockValuation}}
+\doxysubsubsection{\texorpdfstring{StockValuation()}{StockValuation()}}
+{\footnotesize\ttfamily var\+::\+Stock\+Valuation\+::\+Stock\+Valuation (\begin{DoxyParamCaption}\item[{double}]{current\+Price,  }\item[{double}]{quantity,  }\item[{size\+\_\+t}]{idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Оценка для простых акций (Linear/\+Log-\/\+Normal payoff). 
+
+Модель\+: $ P_{new} = P_{old} \times \exp(r) \times Quantity $ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classvar_1_1StockValuation_a939d589a5b33938217b3093d1c190adc}\label{classvar_1_1StockValuation_a939d589a5b33938217b3093d1c190adc} 
+\index{var::StockValuation@{var::StockValuation}!value@{value}}
+\index{value@{value}!var::StockValuation@{var::StockValuation}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}}
+{\footnotesize\ttfamily double var\+::\+Stock\+Valuation\+::value (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacevar_acc465a5d165b0ae17c8fd2211b6c949d}{Scenario}} \&}]{scenario }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Возвращает новую стоимость позиции в сценарии. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scenario} & Вектор доходностей рынка. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classvar_1_1ValuationFunction_ac3d2d8af3c815e23323ee24aadf82dd5}{var\+::\+Valuation\+Function}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classvar_1_1StockValuation_a7adb43a2103ccaa3414fff95f4715686}\label{classvar_1_1StockValuation_a7adb43a2103ccaa3414fff95f4715686} 
+\index{var::StockValuation@{var::StockValuation}!idx\_@{idx\_}}
+\index{idx\_@{idx\_}!var::StockValuation@{var::StockValuation}}
+\doxysubsubsection{\texorpdfstring{idx\_}{idx\_}}
+{\footnotesize\ttfamily size\+\_\+t var\+::\+Stock\+Valuation\+::idx\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classvar_1_1StockValuation_a8fb3e77bb1b392041c57ca51d53151f9}\label{classvar_1_1StockValuation_a8fb3e77bb1b392041c57ca51d53151f9} 
+\index{var::StockValuation@{var::StockValuation}!price\_@{price\_}}
+\index{price\_@{price\_}!var::StockValuation@{var::StockValuation}}
+\doxysubsubsection{\texorpdfstring{price\_}{price\_}}
+{\footnotesize\ttfamily double var\+::\+Stock\+Valuation\+::price\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classvar_1_1StockValuation_aef619d8f45b2165a97181490a3c89616}\label{classvar_1_1StockValuation_aef619d8f45b2165a97181490a3c89616} 
+\index{var::StockValuation@{var::StockValuation}!quantity\_@{quantity\_}}
+\index{quantity\_@{quantity\_}!var::StockValuation@{var::StockValuation}}
+\doxysubsubsection{\texorpdfstring{quantity\_}{quantity\_}}
+{\footnotesize\ttfamily double var\+::\+Stock\+Valuation\+::quantity\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ValuationFunction_8hpp}{Valuation\+Function.\+hpp}}\end{DoxyCompactItemize}

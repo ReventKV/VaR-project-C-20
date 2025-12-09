@@ -1,0 +1,21 @@
+\doxysection{Risk\+Model.\+hpp}
+\hypertarget{RiskModel_8hpp_source}{}\label{RiskModel_8hpp_source}\index{RiskModel.hpp@{RiskModel.hpp}}
+\mbox{\hyperlink{RiskModel_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{TimeSeries_8hpp}{var/TimeSeries.hpp}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <Eigen/Dense>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacevar}{var}}\ \{}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classvar_1_1RiskModel}{RiskModel}}\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ Eigen::MatrixXd\ \mbox{\hyperlink{classvar_1_1RiskModel_a23b787f2464e5a18c8248610af5740d1}{computeCovarianceMatrix}}(\textcolor{keyword}{const}\ std::vector<TimeSeries>\&\ timeSeriesList);}
+\DoxyCodeLine{00028\ \ \ \ \ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{static}\ std::vector<TimeSeries>\ \mbox{\hyperlink{classvar_1_1RiskModel_a2276a3a3244bd51ccdb102940ed1b1de}{alignTimeSeries}}(\textcolor{keyword}{const}\ std::vector<TimeSeries>\&\ inputs);}
+\DoxyCodeLine{00041\ \};}
+\DoxyCodeLine{00042\ \}}
+
+\end{DoxyCode}

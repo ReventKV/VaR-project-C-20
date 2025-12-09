@@ -1,0 +1,118 @@
+\doxysection{var\+::Risk\+Model Class Reference}
+\hypertarget{classvar_1_1RiskModel}{}\label{classvar_1_1RiskModel}\index{var::RiskModel@{var::RiskModel}}
+
+
+Математическое ядро моделирования рисков.  
+
+
+
+
+{\ttfamily \#include $<$Risk\+Model.\+hpp$>$}
+
+
+
+Collaboration diagram for var\+::Risk\+Model\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{classvar_1_1RiskModel__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{classvar_1_1RiskModel_a23b787f2464e5a18c8248610af5740d1}{compute\+Covariance\+Matrix}} (const std\+::vector$<$ \mbox{\hyperlink{classvar_1_1TimeSeries}{Time\+Series}} $>$ \&time\+Series\+List)
+\begin{DoxyCompactList}\small\item\em Вычисляет ковариационную матрицу доходностей. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ \mbox{\hyperlink{classvar_1_1TimeSeries}{Time\+Series}} $>$ \mbox{\hyperlink{classvar_1_1RiskModel_a2276a3a3244bd51ccdb102940ed1b1de}{align\+Time\+Series}} (const std\+::vector$<$ \mbox{\hyperlink{classvar_1_1TimeSeries}{Time\+Series}} $>$ \&inputs)
+\begin{DoxyCompactList}\small\item\em Выравнивает временные ряды по единой шкале дат. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Математическое ядро моделирования рисков. 
+
+Отвечает за обработку сырых временных рядов, их выравнивание и построение ковариационной матрицы. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classvar_1_1RiskModel_a2276a3a3244bd51ccdb102940ed1b1de}\label{classvar_1_1RiskModel_a2276a3a3244bd51ccdb102940ed1b1de} 
+\index{var::RiskModel@{var::RiskModel}!alignTimeSeries@{alignTimeSeries}}
+\index{alignTimeSeries@{alignTimeSeries}!var::RiskModel@{var::RiskModel}}
+\doxysubsubsection{\texorpdfstring{alignTimeSeries()}{alignTimeSeries()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classvar_1_1TimeSeries}{Time\+Series}} $>$ var\+::\+Risk\+Model\+::align\+Time\+Series (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classvar_1_1TimeSeries}{Time\+Series}} $>$ \&}]{inputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Выравнивает временные ряды по единой шкале дат. 
+
+Статический метод.
+\begin{DoxyEnumerate}
+\item Собирает объединение (Union) всех дат из всех активов.
+\item Если у актива нет цены на дату T, используется цена T-\/1 (Forward Fill). Это критически важно для корректного расчета корреляций между активами с разных бирж.
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}{Parameters}
+{\em inputs} & Исходные временные ряды. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Вектор выровненных рядов (все имеют одинаковую длину и набор дат). 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvar_1_1RiskModel_a2276a3a3244bd51ccdb102940ed1b1de_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classvar_1_1RiskModel_a23b787f2464e5a18c8248610af5740d1}\label{classvar_1_1RiskModel_a23b787f2464e5a18c8248610af5740d1} 
+\index{var::RiskModel@{var::RiskModel}!computeCovarianceMatrix@{computeCovarianceMatrix}}
+\index{computeCovarianceMatrix@{computeCovarianceMatrix}!var::RiskModel@{var::RiskModel}}
+\doxysubsubsection{\texorpdfstring{computeCovarianceMatrix()}{computeCovarianceMatrix()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix\+Xd var\+::\+Risk\+Model\+::compute\+Covariance\+Matrix (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classvar_1_1TimeSeries}{Time\+Series}} $>$ \&}]{time\+Series\+List }\end{DoxyParamCaption})}
+
+
+
+Вычисляет ковариационную матрицу доходностей. 
+
+Метод автоматически выполняет выравнивание данных (align\+Time\+Series), расчет доходностей и построение матрицы.
+
+
+\begin{DoxyParams}{Parameters}
+{\em time\+Series\+List} & Вектор временных рядов (по одному на каждый актив). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Квадратная матрица Eigen (N x N). 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & Если данных недостаточно или они некорректны. \\
+\hline
+\end{DoxyExceptions}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvar_1_1RiskModel_a23b787f2464e5a18c8248610af5740d1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvar_1_1RiskModel_a23b787f2464e5a18c8248610af5740d1_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{RiskModel_8hpp}{Risk\+Model.\+hpp}}\item 
+\mbox{\hyperlink{RiskModel_8cpp}{Risk\+Model.\+cpp}}\end{DoxyCompactItemize}

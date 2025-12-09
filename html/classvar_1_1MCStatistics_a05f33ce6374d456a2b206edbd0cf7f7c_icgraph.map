@@ -1,0 +1,11 @@
+<map id="var::MCStatistics::computeVaR" name="var::MCStatistics::computeVaR">
+<area shape="rect" id="Node000001" title="Вычисляет VaR на основе распределения убытков." alt="" coords="613,37,753,77"/>
+<area shape="rect" id="Node000002" href="$classvar_1_1HistoricalVaRCalculator.html#a4106672e0e1166885d9b347fc4991337" title="Вычисляет VaR." alt="" coords="355,5,559,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="599,48,559,42,559,37,600,43"/>
+<area shape="rect" id="Node000003" href="$classvar_1_1MonteCarloVaRCalculator.html#a395e29493af5d757dfe7a45e236aa46a" title="Вычисляет величину риска (VaR) в валюте портфеля." alt="" coords="348,69,565,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="600,72,566,77,565,71,599,66"/>
+<area shape="rect" id="Node000004" href="$classvar_1_1VaREngine.html#afc175c272e1694063426077f219a4e03" title="Запуск полного отчета о рисках." alt="" coords="108,77,300,102"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="334,92,300,92,300,87,334,87"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,77,60,102"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="95,92,60,92,60,87,95,87"/>
+</map>

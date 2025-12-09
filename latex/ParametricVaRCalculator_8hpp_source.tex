@@ -1,0 +1,31 @@
+\doxysection{Parametric\+Va\+RCalculator.\+hpp}
+\hypertarget{ParametricVaRCalculator_8hpp_source}{}\label{ParametricVaRCalculator_8hpp_source}\index{ParametricVaRCalculator.hpp@{ParametricVaRCalculator.hpp}}
+\mbox{\hyperlink{ParametricVaRCalculator_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ include/var/ParametricVaRCalculator.hpp}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{VaRCalculator_8hpp}{var/VaRCalculator.hpp}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{RiskModel_8hpp}{var/RiskModel.hpp}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacevar}{var}}\ \{}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classvar_1_1ParametricVaRCalculator}{ParametricVaRCalculator}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classvar_1_1VaRCalculator}{VaRCalculator}}\ \{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{classvar_1_1ParametricVaRCalculator}{ParametricVaRCalculator}}(std::map<std::string,\ TimeSeries>\ marketData);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classvar_1_1ParametricVaRCalculator_ae89329fc76e92ffce9cb6fccad788134}{calculateVaR}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classvar_1_1Portfolio}{Portfolio}}\&\ portfolio,\ \textcolor{keywordtype}{double}\ confidence,\ \textcolor{keywordtype}{int}\ horizon)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00037\ \ \ \ \ std::map<std::string,\ TimeSeries>\ \mbox{\hyperlink{classvar_1_1ParametricVaRCalculator_afcd7b8e96b48f869df41f416c3aa4d26}{marketData\_}};}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{comment}{//\ Нужно\ ли\ ?}}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{classvar_1_1RiskModel}{RiskModel}}\ \mbox{\hyperlink{classvar_1_1ParametricVaRCalculator_adefdb6af747b9092fa8e42ff8e7145f7}{riskModel\_}};}
+\DoxyCodeLine{00040\ \ \ \ \ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classvar_1_1ParametricVaRCalculator_a7eb02c5f3e93983abf102fcaaacbcde1}{getNormalQuantile}}(\textcolor{keywordtype}{double}\ confidence)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00046\ \};}
+\DoxyCodeLine{00047\ \}}
+
+\end{DoxyCode}
